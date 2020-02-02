@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>4-1if条件语句</title>
+		<script type="text/javascript">
+			var a;
+			a =prompt("请输入你的分数");
+			if(a>=90){
+				document.write("优秀");
+			}else if(a>=80){
+				document.write("良好");
+			}else if(a>=60){
+				document.write("及格");
+			}else if(a<60){
+				document.write("不及格");				
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
