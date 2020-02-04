@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>6-7数组中的最大值和最小值</title>
+		<script type="text/javascript">
+			var alert1 =[24,54,6,4,34,65];
+			var document1;//交换数
+			var typeof1=0;//数组下标
+			var typeof2=0;//数组下标
+			var length1 =alert1.length;//数组长度
+			for (;typeof1<length1;typeof1++){
+				for(typeof2=typeof1+1;typeof2<length1;typeof2++){
+					if (alert1[typeof2]<alert1[typeof1]) {
+						document1 = alert1[typeof1];
+						alert1[typeof1] =alert1[typeof2];
+						alert1[typeof2] =document1;
+					}
+				}
+			}
+			for (typeof1 =0;typeof1<length1;typeof1++) {
+				document.write(alert1[typeof1]+"&nbsp&nbsp");
+			}
+			document.write("<br>最小值是:"+alert1[0]+"&nbsp&nbsp最大值是:"+alert1[length1-1]);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
