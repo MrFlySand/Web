@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>二维数组的查找问题</title>
+		<script type="text/javascript">
+			var i,j;
+			var arr=[[1,2,0,0,0],[2,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];
+			//给二维数组赋值
+			for(i=0;i<5;i++){
+				for(j=0;j<5;j++){
+					if(i==j){
+						arr[i][j]=arr[0][i]*arr[j][0];
+					}
+				}
+			}
+			//输出二维数组
+			for(i=0;i<5;i++){
+				for(j=0;j<5;j++){
+					document.write(arr[i][j]+"&nbsp");
+				}
+				document.write("<br>");
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
