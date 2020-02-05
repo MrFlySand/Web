@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>6-15对象属性修改及删除</title>
+		<script type="text/javascript">
+			var ren ={name:"小明",sex:"男",age:12,height:1.8};
+//修改对象属性:
+			ren.age = 15;
+			ren["height"]=1.85;
+//删除对象属性:
+			delete ren["sex"];
+			console.log(ren);			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
