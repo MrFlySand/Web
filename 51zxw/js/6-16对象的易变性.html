@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>6-16对象的易变性</title>
+		<script type="text/javascript">
+//变量不是易变的			
+			//var a ="明天会更好";
+			//var b =a;
+			//b=123;
+			//alert(a);
+			//document.write(b);
+//对象的易变性			
+			var c = {name:"小明",sex:"男",age:12,height:1.8};
+			var d =c;
+			d.name ="小红";
+			//d.sex ="女";
+			console.log(c);
+			console.log(d);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
