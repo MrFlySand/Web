@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>7-8元素类名的切换</title>
+		<style type="text/css">
+			.a1{color:black;font-size:16px;}
+			.a1{color:red;font-size:20px;}
+			.a1{width:200px;height:100px;border:2px solid black;}
+		</style>
+	</head>
+	<body>
+		<div id="aa" class="a1 a2 a3">
+			明天会更好
+		</div>
+		
+		<script type="text/javascript">
+			var aa=document.getElementById("aa");
+//1.toggle有相同类名时执行删除,没有相同类名时执行添加,但只能添加或删除一个
+			//aa.classList.toggle("a1");
+			//aa.classList.toggle("a5");
+//2.强制执行添加或删除
+	//a.toggle("类名",true);添加类名
+	//b.toggle("类名",false);删除类名
+			aa.classList.toggle("a4",true);
+			aa.classList.toggle("a1",false)
+		</script>
+	</body>
+</html>
