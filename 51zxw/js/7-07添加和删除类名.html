@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>7-7添加和删除类名</title>
+		<style type="text/css">
+			.a1{color:black;font-size:16px;}
+			.a1{color:red;font-size:20px;}
+			.a1{width:200px;height:100px;border:2px solid black;}
+		</style>
+	</head>
+	<body>
+		<div id="aa" class="a1 a4 a5">
+			明天会更好
+		</div>
+		
+		<script type="text/javascript">
+			var aa=document.getElementById("aa");
+//1.添加类名.添加相同的类名,不会有重复
+			//aa.classList.add("a2");
+			aa.classList.add("a1","a2","a3");
+//2.删除类名.如果要删除的类名没有也不会报错
+			//aa.classList.remove("a4");
+			aa.classList.remove("a4","a5");
+		</script>
+	</body>
+</html>
