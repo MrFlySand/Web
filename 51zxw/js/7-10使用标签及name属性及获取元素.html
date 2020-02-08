@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>7-10使用标签及name属性及获取元素</title>
+	</head>
+	<body>
+		<div id="a1" class="aa">明天会更好1</div>
+		<p id="a2" class="aa">明天会更好2</p>
+		<div id="a3" class="aa">明天会更好3</div>
+		<p id="a4" class="aa">明天会更好4</p>
+		<div id="a5" class="aa">明天会更好5</div>
+		<script type="text/javascript">
+//1.标签选择器
+			var aa=document.getElementsByTagName("p");
+			var bb=document.getElementsByTagName("div");
+			console.log(aa);
+			aa[0].style.color="red";
+			for (var i=0;i<bb.length;i++) {
+				bb[i].style.color="blue";
+			}
+		</script>
+	</body>
+</html>
