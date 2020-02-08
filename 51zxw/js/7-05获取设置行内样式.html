@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>7-5获取设置行内样式</title>
+	</head>
+	<body>
+		<div id="aa" style="color: red; font-size:24px;font-weight:700;">
+			明天会更好
+		</div>
+		
+		<script type="text/javascript">
+			var a1=document.getElementById("aa");
+//获取元素的行内样式
+			//alert(document.getElementById("aa").style.cssText);//output:style里面的样式
+//设置元素的行内样式,如果设置会覆盖原来的所有样式
+			a1.style.cssText="color:blue;font-size:30px;";
+		</script>
+	</body>
+</html>
