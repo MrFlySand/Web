@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>7-4通用方法获取和设置元素属性</title>
+	</head>
+	<body>
+		<input type="text" name="abc" class="abc1" id="a1" value="明天会更好" xyz="111"/>
+		
+		<script type="text/javascript">
+			var  a1=document.getElementById("a1");
+//1.获取任意属性 元素.getAttribute("属性名");
+			//alert(a1.getAttribute("xyz"));//output111
+			//alert(a1.getAttribute("class"));
+			alert(a1.getAttribute("id"));
+//2.设置任意属性 元素.setAttribute("属性名","属性值");
+			a1.setAttribute("class","aabb1");
+			a1.setAttribute("title","鼠标移到文本时的样式");
+		</script>
+	</body>
+</html>
