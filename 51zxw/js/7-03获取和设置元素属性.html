@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>7-3获取和设置元素属性</title>
+		
+	</head>
+	<body>
+		<input type="text" name="abc" class="abc1" id="a1" value="明天会更好"/>
+		
+		<script type="text/javascript">
+			var a1=document.getElementById("a1");
+//获取元素
+			//alert(a1.id);	
+			//alert(a1.type);
+			alert(document.getElementById("a1").value);//获取文本(明天会更好)
+			alert(a1.name);
+			alert(a1.class);//获取类名
+			alert(a1.className);//获取类名
+//设置元素属性
+			a1.id="cba";
+			a1.value="明天会更好2";
+			a1.title="鼠标移到文本时的样式";
+		</script>
+	</body>
+</html>
