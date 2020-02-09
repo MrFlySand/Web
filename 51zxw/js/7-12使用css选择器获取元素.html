@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>7-12使用css选择器获取元素</title>
+	</head>
+	<body>
+		<div id="aa1" class="aa" name="aaa">
+			<p id="a2" class="aa">明天会更好2</p>
+			<div id="a3" class="aa2" name="xyz">明天会更好3</div>
+			<p id="a4" class="aa" name="xyz">明天会更好4</p>
+			<div id="a5" class="aa2">明天会更好5</div>
+		</div>
+		
+		<script type="text/javascript">
+//1.返回文档中匹配指定css选择器的所有元素
+	//语法:querySelectorAll("css选择器");
+			//var aa1=document.querySelectorAll("#aa1 p");
+			//for (var i=0;i<aa1.length;i++){
+			//	aa1[i].style.color="red";
+			//}
+//1.返回文档中匹配指定css选择器的第一个元素
+	//语法:querySelectorAll("css选择器");
+			var aa1=document.querySelector("#aa1 p");
+			var bb1=document.querySelector("#aa1 div");
+			aa1.style.color="red";
+			bb1.style.color="blue";
+		</script>
+	</body>
+</html>
