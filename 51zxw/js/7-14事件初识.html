@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>7-14事件初识</title>
+		<style type="text/css">
+			#aa{
+				width:100px;height:30px;line-height:30px;
+				text-align:center;background:burlywood;
+				margin:0 auto;
+			}
+		</style>
+		<script type="text/javascript">
+//html代码执行完后执行JS代码
+			window.onload=function(){
+				var aa=document.getElementById("aa");
+	//鼠标单击事件
+				aa.onclick=function(){
+					alert("我的事件被触发了");
+				}
+	//鼠标按下事件
+				aa.onmousedown=function(){
+					alert("我被点击了");
+				}
+	//鼠标移入事件
+				aa.onmouseover=function(){
+					alert("鼠标移入了事件");
+				}
+	//鼠标触摸开始时事件(只限手机)
+				aa.onotuchstart=function(){
+					alert("我的事件被触摸了");
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="aa">明天会更好</div>
+	</body>
+</html>
