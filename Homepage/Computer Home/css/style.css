@@ -1,0 +1,9 @@
+/*通用样式play*/
+.label p{
+	background:url(../img/redLine.png) center;
+	text-align:center;
+}
+.label a{
+	background:red;width:200px;height:150px;
+}
+/*通用样式end*/
