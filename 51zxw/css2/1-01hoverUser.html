@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>1-01hover使用技巧</title>
 		<style type="text/css">
 			#zxw{
 				width: 400px;height: 400px;background: #000;
@@ -23,12 +23,14 @@
 			/*#zxw3:hover{
 				color: #fff;font-size: 20px;
 			}*/
-			/*#zxw3:hover+p{
-				color: #fff;font-size: 20px;
-			}*/
-			#zxw3:hover~p{
+			/*第三个p元素改变样式*/
+			#zxw3:hover+p{
 				color: #fff;font-size: 20px;
 			}
+			/*第三,四个p元素改变样式*/
+			/*#zxw3:hover~p{
+				color: #fff;font-size: 20px;
+			}*/
 		</style>
 	</head>
 	<body>
