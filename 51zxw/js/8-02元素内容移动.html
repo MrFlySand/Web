@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>8-2元素内容移动</title>
+		<style type="text/css">
+			*{
+				margin:0;padding:0;
+			}
+			.bb{
+				width:300px;height:200px;border:1px solid black;
+				margin:0 auto;
+			}
+			#butt{
+				width:300px;height:50px;margin:50px auto;
+				font-size:24px;display: block;/*转成块级元素*/
+			}
+		</style>
+	</head>
+	<body>
+		<div id="aa" class="bb">明天会更好</div>
+		<button id="butt">点击更换</button>
+		<div id="xx" class="bb"></div>
+		<script type="text/javascript">
+			var butt =document.getElementById("butt");
+			var aa = document.getElementById("aa");
+			var xx = document.getElementById("xx");
+			function clickOn(){
+				//鼠标点击后运行函数
+				butt.onclick =function clickOn(){
+				aa.innerHTML="";//更改元素内容
+				xx.innerHTML="明天会更好";
+				replace();
+				}
+			}
+			function replace(){
+				butt.onclick=function replace(){
+				aa.innerHTML="明天会更好";//更改元素内容
+				xx.innerHTML="";
+				clickOn();
+				}
+			}
+			clickOn();
+		</script>
+	</body>
+</html>
