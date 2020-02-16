@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>8-4操作元素尺寸</title>
+		<style type="text/css">
+			.but{
+				margin:0 auto;left:45%;position:relative;
+			}
+			#button{
+				width:50px;height:30px;
+			}
+			#box{
+				margin:10px auto;
+				background:linear-gradient(45deg,#c73ee9,#2828de);
+				position:relative;
+			}
+			p{
+				color:white;
+			}
+			#p1{
+				position:absolute;left:38%;top:-20px;
+			}
+			#p2{
+				position:absolute;top:35%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="but">
+			<button id="buttBig">大</button>
+			<button id="buttSmall">小</button>
+		</div>
+		<div id="box" style="width:200px;height:200px;">
+			<p id="p1">200px</p>
+			<p id="p2">100px</p>
+		</div>
+		<script type="text/javascript">
+//获取元素
+			var buttBig =document.getElementById("buttBig");
+			var buttSmall=document.getElementById("buttSmall");
+			var box=document.getElementById("box");
+			var width,height;
+			function oldValue(){
+//获取元素尺寸并转成数值类型
+				width=parseInt(box.style.width);
+				height=parseInt(box.style.height);
+			}
+//元素尺寸重新赋值
+			function assignment(){
+				p1.innerHTML=width;
+				p2.innerHTML=height;
+				box.style.width=width;
+				box.style.height=height;	
+			}
+			buttBig.onclick=function(){
+				oldValue();
+				width=width+20+"px";
+				height=height+20+"px";
+				assignment();
+			}
+			buttSmall.onclick=function(){
+				oldValue();
+				width=width-20+"px";
+				height=height-20+"px";
+				assignment();
+			}	
+		</script>
+	</body>
+</html>
