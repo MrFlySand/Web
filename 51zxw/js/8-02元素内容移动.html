@@ -22,21 +22,41 @@
 		<button id="butt">点击更换</button>
 		<div id="xx" class="bb"></div>
 		<script type="text/javascript">
+//方法1
+//			var butt =document.getElementById("butt");
+//			var aa = document.getElementById("aa");
+//			var xx = document.getElementById("xx");
+//			var t=1;
+//			butt.onclick =function(){
+//				if(t==1){
+//					xx.innerHTML=aa.innerHTML;
+//					aa.innerHTML="";
+//					t=2;
+//				}else{
+//					aa.innerHTML=xx.innerHTML;
+//					xx.innerHTML="";
+//					t=1;
+//				}
+//			}
+//方法2
 			var butt =document.getElementById("butt");
 			var aa = document.getElementById("aa");
 			var xx = document.getElementById("xx");
+			var t;
 			function clickOn(){
 				//鼠标点击后运行函数
 				butt.onclick =function clickOn(){
-				aa.innerHTML="";//更改元素内容
-				xx.innerHTML="明天会更好";
+				t=xx.innerHTML;//更改元素内容
+				xx.innerHTML=aa.innerHTML;
+				aa.innerHTML=t;
 				replace();
 				}
 			}
 			function replace(){
 				butt.onclick=function replace(){
-				aa.innerHTML="明天会更好";//更改元素内容
-				xx.innerHTML="";
+				t=xx.innerHTML;//更改元素内容
+				xx.innerHTML=aa.innerHTML;
+				aa.innerHTML=t;
 				clickOn();
 				}
 			}
