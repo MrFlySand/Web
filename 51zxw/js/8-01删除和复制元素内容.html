@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>8-1删除和复制元素内容</title>
+		<style type="text/css">
+			#aa{
+				width:300px;height:200px;border:1px solid black;
+				margin:0 auto;
+			}
+			#butt{
+				width:300px;height:50px;margin:50px auto;
+				font-size:24px;display: block;/*转成块级元素*/
+			}
+		</style>
+	</head>
+	<body>
+		<div id="aa">明天会更好</div>
+		<button id="butt">点击删除</button>
+		<script type="text/javascript">
+			var butt =document.getElementById("butt");
+			var aa = document.getElementById("aa");
+			//鼠标单击时发生的事件
+			butt.onclick = function(){
+				aa.innerHTML="";//更改元素内容
+			}
+		</script>
+	</body>
+</html>
