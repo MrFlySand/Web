@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>8-21清理定时器</title>
+		<style type="text/css">
+			body{position:relative;}
+			#aa{
+				width:100px;height:100px;
+				background:linear-gradient(45deg,#354657,#487658);
+				position:absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<button type="button" id="butt">点击移到</button>
+		<div id="aa" style="left:0px;"></div>
+		<script type="text/javascript">
+			var butt =document.getElementById("butt");
+			var aa =document.getElementById("aa");
+			var judge=0;
+			var timer;
+			function inter(){
+		//获取aa的left值,转成整数
+				var o_left =parseInt(aa.style.left);
+				var n_left =o_left+judge;
+				aa.style.left=n_left+"px";
+				if(o_left>800){
+					judge =-5;
+				}else if(o_left==0){
+					judge =5;
+				}	
+			}
+			butt.onclick = function(){
+				//清理定时器			
+					clearInterval(timer);
+					timer=setInterval(inter,10);
+			}
+		</script>
+	</body>
+</html>
