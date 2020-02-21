@@ -29,7 +29,7 @@
 		<div class="box">
 			<div id="minutes">00</div>
 			<div class="point">.</div>
-			<!--<div id="seconds">00</div>-->
+			<div id="seconds">00</div>
 		</div>
 		<button type="button" id="butt">点击开始</button>
 		<script type="text/javascript">
@@ -39,21 +39,21 @@
 			var m=0,s=0;
 			var inter;
 			function time(){
-				m=m+0.01;
-				s=s+10;
+				m=m+0.004;
+				s=s+1;
 				if(m>15){
 					clearInterval(inter);
 					alert("时间已超时");
 				}else{
-					minutes.innerHTML=m;
-					seconds.innerHTML=s;
+					minutes.innerHTML=parseInt(m);
+					seconds.innerHTML=s%1000;
 				}
 			}
 //鼠标按下时执行的参数
 			butt.onmousedown=function(){
 				butt.innerHTML="松开暂时";
 		//10毫秒后执行这个函数
-				inter=setInterval(time,10)
+				inter=setInterval(time,1)
 			}
 //鼠标松开时执行的函数
 			butt.onmouseup =function(){
@@ -64,7 +64,7 @@
 					alert("挑战成功");
 				}else if(m==10&&s==100&&p!=1){
 					minutes.innerHTML=10;
-					//seconds.innerHTML=10;
+					seconds.innerHTML=10;
 					alert("挑战失败");
 				}else{
 					alert("挑战失败");
