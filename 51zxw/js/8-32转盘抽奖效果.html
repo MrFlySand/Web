@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>8-32转盘抽奖效果</title>
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			.box{
+				width:450px;height:450px;margin:100px auto;
+				border-radius:50%;overflow:hidden;position:relative;
+			}
+			img{
+				width:100%;height:100%;position:absolute;
+			}
+			#zz{
+				width:80px;height:100px;left:185px;top:175px;
+			}
+			.zp{
+				animation:zpzd 1s linear infinite;/*绑定名称 转到1次的时间 匀速转动 不断转到*/
+			}
+			.paused{
+				animation-play-state:paused;
+			}
+			@keyframes zpzd{
+				0%{transform:rotate(0deg);}
+				100%{transform:rotate(360deg);}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<img src="../img/zhuanpang_2.jpg" id="zp"/>
+			<img src="../img/zhuanpangzhizheng.jpg" id="zz"/>
+			<script type="text/javascript">
+				var zp= document.getElementById("zp");
+				var zz= document.getElementById("zz");
+				var abc = 1;
+//获取旋转角度函数开始
+				function trans(r){
+					var values =r.split('(')[1].split(')')[0].split(',');
+					var a =values[0];
+					var b =values[1];
+					var scale =Math.sqrt(a*a+b*b); 
+					var sin = b/scale;
+					var rota =Math.round(Math.atan2(b,a)*(180/Math.PI));
+					var rotate =rota>=0?rota:rota+360;
+					return rotate;
+				}
+//获取旋转角度函数结束
+				zz.onclick =function(){
+					if(abc==1){
+				//设置属性,让转盘转动.修改元素值为zp的class的属性名为zp
+						zp.setAttribute("class","zp");
+						abc=0;
+					}else{
+				//else让转盘停止
+		//获取非元素尺寸并转成数值类型
+				// parseInt(getComputedStyle(ID名,null).属性名);
+						var rot = getComputedStyle(zp,"null").transform;
+						var rotate =trans(rot);
+						console.log(rotate);
+						zp.style.transform = "rotate("+rotate+"deg)";
+				//设置条件
+						if(rotate>=279&&rotate<=293){
+				//设置角度
+					//设置随机值0~1
+					//floor(x)小于等于 x，且与 x 最接近的整数。
+							var num=Math.floor(Math.random()*(300-295+1)+295);
+							zp.style.transform = "rotate("+num+"deg)";
+						}else{
+							zp.style.transform = "rotate("+rotate+"deg)";
+						}
+						//转盘停止
+						zp.setAttribute("class","paused");
+						abc=1;
+					}
+				}
+			</script>
+		</div>
+	</body>
+</html>
