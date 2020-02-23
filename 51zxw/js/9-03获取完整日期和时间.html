@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>9-3获取完整日期和时间</title>
+		
+	</head>
+	<body>
+		<script type="text/javascript">
+			var myDate = new  Date(); 
+//2.获取完整的年月日
+//			var y = new Date().toLocaleDateString();
+			var y = new Date(1560000000000).toLocaleDateString();
+//3.获取完整的时分秒
+			var h = new Date().toLocaleTimeString();
+			var h = new Date(1560000000000).toLocaleTimeString();
+//4.获取完整的年月日时分秒
+			var yh = new Date().toLocaleString();
+			var yh = new Date(1560000000000).toLocaleString();
+			document.write(y+","+h+"<br>"+yh);
+		</script>
+	</body>
+</html>
