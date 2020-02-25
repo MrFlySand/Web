@@ -1,9 +1,65 @@
 /*通用样式play*/
-.label p{
-	background:url(../img/redLine.png) center;
-	text-align:center;
+*{
+	color: #000000;text-decoration:none;
 }
-.label a{
+.box{
+	width:1200px;margin:0px auto;/*四个方向为50px的外边距,内容大于元素框被剪切*/
+	position:relative;
+}
+
+.links p{
+	background:url(../img/redLine.png) center;
+	text-align:center;background-repeat:no-repeat;
+	
+
+
+}
+.links span{
 	background:red;width:200px;height:150px;
 }
+.links .card{
+	background:rgb(187,255,255);width:200px;height:150px;
+	border:3px black solid;border-radius:5px;
+	inline-block;margin:10px;text-align-last: left;
+	display:inline-block;
+}
+
+.card img{
+	width:50px;height:50px;margin-left:5px;margin-top:5px;border-radius:3px;
+	float:left;
+}
+.card .start{
+	font-size:16px;font-weight:50;margin-left:5px;display:inline;
+}
+.card .label{
+	font-weight:700;margin-left:5px;margin-top:0px;
+}
+.card .introduction{
+	font-weight:100;font-size:17px;color:red;
+}
 /*通用样式end*/
+/*快捷跳转play*/
+.head{
+	height:300px;
+}
+.jump{
+	background:rgba(0,0,0,0.2);
+	width:200px;height:300px;left:10px;
+	position:absolute;border-radius:5px;
+}
+.jump a{
+	/*display:inline-block;*/
+}
+/*快捷跳转end*/
+/*公告play*/
+.announcement{
+	background:rgba(0,0,0,0.2);position:absolute;
+	width:200px;height:300px;right:10px;
+}
+.announcement ul{
+	list-style-type:outside;
+}
+/*公告end*/
+/*链接play*/
+
+/*链接end*/
