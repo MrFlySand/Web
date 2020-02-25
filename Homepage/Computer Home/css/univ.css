@@ -1,0 +1,4 @@
+li{
+	list-style:none;/*列标前没有标点*/
+	float:left;
+}
