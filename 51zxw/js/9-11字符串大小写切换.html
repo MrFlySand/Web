@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>9-11字符串大小写切换</title>
+		
+	</head>
+	<body>
+		<script type="text/javascript">
+			var ch= "mingtianghuigenghao";
+			var ch2 ="flySand flySand";
+			var ch3 ="xiaoming";
+//1.字符串大小写转换
+	//A.值.toUpperCase()将所有的字符串都转成大写字母
+			//var a = ch.toUpperCase();
+	//B.值.toLowerCase()将所有的字符串都转成小写字母
+			//var b = ch2.toLowerCase();
+	//C.把字符的首字母转成大写
+		//a.找到第一个字符
+			//var c = ch3.charAt(0);
+		//b.转成大写
+			//var d = c.toUpperCase();
+		//d.字符串替换
+			//var ch3 = ch3.replace(c,d);
+		//合并 
+			var ch3 = ch3.replace(ch3.charAt(0),ch3.charAt(0).toUpperCase());
+			var ch3 = ch3.replace(ch3.charAt(4),ch3.charAt(4).toUpperCase());
+			document.write(ch3);
+		</script>
+	</body>
+</html>
