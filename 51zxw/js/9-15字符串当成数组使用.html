@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>9-15字符串当成数组使用</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//把字符串当成数组用
+			var ch ="www.flysand.com";
+			var a = ch.charAt(0);
+			var b = ch[4];//f
+			//document.write(ch.length);//15
+			//for (var i=0;i<ch.length;i++) {
+			//	document.write(ch[i]+"<br>");
+			//}
+//修改大小写
+			var name = "xiaoming";
+			name = name.replace(name[0],name[0].toUpperCase());
+			name = name.replace(name[4],name[4].toUpperCase());
+			document.write(name);
+		</script>
+	</body>
+</html>
