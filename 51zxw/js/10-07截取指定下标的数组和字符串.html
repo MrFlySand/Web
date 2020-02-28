@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>10-7截取指定下标的数组和字符串</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//slice()截取指定下标的数组元素,不会修改原数组
+	//对数组和字符串都有效
+			var arr = [0,1,2,3,4,5,6,7,8,9];
+			var a = arr.slice(2);//2,3,4,5,6,7,8,9
+			var arr = [0,1,2,3,4,5,6,7,8,9];
+			var b = arr.slice(2,4);//2,3,4
+			var arr = [0,1,2,3,4,5,6,7,8,9];
+			var c = arr.slice(-3,-1);//7,8
+			var arr = [0,1,2,3,4,5,6,7,8,9];
+			var d = arr.slice(-6,-9);//空
+			var ch ="www.flysand.com";
+			var e = ch.slice(4,11);//flysand
+			document.write(e);
+		</script>
+	</body>
+</html>
