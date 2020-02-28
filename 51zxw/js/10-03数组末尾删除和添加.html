@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>10-03数组末尾删除和添加</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr = [1,2,3,4,5];
+//1. pop()数组末尾移除最后一项,减少数组的length值,返回移除后的元素
+			var a = arr.pop();//5
+			document.write(arr+"<br>");//1,2,3,4
+//2. 用于向数组的末尾添加一个或多个元素,并返回修改的数组长度(数据类型)
+			var b =arr.push(3);//5
+			var d =arr.push("小明");
+			document.write(b+"<br>");
+			document.write(arr);
+		</script>
+	</body>
+</html>
