@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>10-8查找指定元素的下标</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//1. indexOf查找指定元素下标,从前往后查找
+	//A. 若有重复的,则返回第一个值的下标
+			var arr = ["赵","李","钱","孙","李"];
+			var a = arr.indexOf("李");//1
+	//B. 当数组中没有时,返回-1
+			var b = arr.indexOf("红");//-1
+			document.write(b+"<br>");
+//2. lastIndexOf()	
+			var arr1 = ["赵","李","钱","孙","李"];
+			var a1 = arr1.lastIndexOf("李");//4从左往右、
+			document.write(a1);
+		</script>
+	</body>
+</html>
