@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>10-10数组元素升序排列</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//1. 数组变量.sort()用于对数组的元素进行排序
+	//A. 会修改原数组
+	//B. 会转成字符串比较,并从第一个字符进行比较
+			var arr1 = [3,9,7,6,4,2];
+			var arr2 = ["e","d","f","d","g"];
+			var arr3 = [34,35,7,65,4,23];
+			var arr4 = ["de","da","y","ad","z"];
+			arr1.sort();//2,3,4,6,7,9
+			arr2.sort();//d,d,e,f,g
+			arr3.sort();//23,34,35,4,65,7
+			arr4.sort();//ad,da,de,fg,z
+			document.write(arr1+"<br>");
+			document.write(arr2+"<br>");
+			document.write(arr3+"<br>");
+			document.write(arr4+"<br>");
+		</script>
+	</body>
+</html>
