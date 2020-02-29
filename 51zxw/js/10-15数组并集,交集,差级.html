@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>10-15数组并集,交集,差级</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr1 = [1,2,3,4,5];
+			var arr2 = [2,5,8,9,2]
+			var a = new Set(arr1);
+			var b = new Set(arr2);
+			document.write(a+"<br>");
+			console.log(a);
+			document.write(b+"<br>");
+			console.log(b);
+	//1. 并集:a+b两把重复的去掉
+			var set1 = new Set([...a,...b]);
+			var tc = Array.from(set1);
+			document.write(tc+"<br>");
+	//2. 交集:a和b共有的部分		
+			var set2 = new Set([...a].filter(x=> b.has(x)));
+			var inte = Array.from(set2);
+			console.log(set2);
+			document.write(inte+"<br>");//2,5
+			//b.has(x)和下面相同
+			//function(x){
+			//	return b.has(x);
+			//}
+	//3. 差集:a-b
+			var set3 = new Set([...a].filter(x=> !b.has(x)));
+			var ps = Array.from(set3);
+			console.log(set3);
+			document.write(ps+"<br>");//1,3,4
+		</script>
+	</body>
+</html>
