@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>筛选n的倍数的总和</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var small=parseInt(prompt("请输入起始数字"));
+			var big=parseInt(prompt("请输入最终数字"));
+			var num=parseInt(prompt("请输入几的倍数"));
+			var numbers = new Array(10);
+			var i=0,sum=0,j=0,sm=0;
+			while(small<=big){
+				if(small%num == 0){
+					sum += small;
+					
+					small += num ;
+					i++;
+					numbers[i]=small;
+//					if(j==0){
+//						sm = small;
+//						j=1;
+//					}
+				}else{
+					while(small!=num&&small%num!=0) {
+						if (num%2==0) {
+							small +=2;
+						} else{
+							small +=1;
+						}
+					}
+				}
+			}
+			document.write("一共有"+(i-1)+"个数,总和是："+(sum-sm)+"<br>这几个数分别是：<br>");
+			for(var i=0;i<numbers.length-1;i++){
+				if(i%10!=0)
+					document.write(numbers[i]+",");
+				else
+					document.write(numbers[i]+"<br>");
+			}
+		</script>
+	</body>
+</html>
