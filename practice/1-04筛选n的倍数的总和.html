@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>筛选n的倍数的总和</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var min=parseInt(prompt("请输入起始数字"));
+			var max=parseInt(prompt("请输入最终数字"));
+			var num=parseInt(prompt("请输入几的倍数"));
+			document.write(min+"~"+max+"之间"+num+"的倍数的总和是:");
+			if (min%num==0) {
+				min=parseInt(min/num)*num;
+		    	max=parseInt(max/num)*num;
+			} else{
+				min=parseInt(min/num+1)*num;
+		    	max=parseInt(max/num)*num;
+			}
+			var sum =(min+max)*((max-min)/num+1)/2
+			document.write(sum);
+		</script>
+	</body>
+</html>
