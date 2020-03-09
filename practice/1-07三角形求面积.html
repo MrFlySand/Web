@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>三角形求面积</title>
+	</head>
+	<body>
+		<p id="triangle_area">求三角形的面积</p>
+		<script type="text/javascript">
+			triangle_area.onclick = function(){
+				var a = parseInt(prompt("请输入第一条边长"));
+				var b = parseInt(prompt("请输入第二条边长"));
+				var c = parseInt(prompt("请输入第三条边长"));
+				if(a+b>c&&a+c>b&&c+b>a){ 
+            		var s=(a+b+c)/2;
+            		var are=Math.sqrt(s*(s-a)*(s-b)*(s-c));
+		            document.write("三角形的面积是:"+are);
+       		 	}else{
+                	document.write("两边之和大于第三边");
+       			}
+			}
+		</script>
+	</body>
+</html>
