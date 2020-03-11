@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>1-6jQuery链式语法</title>
+		<style type="text/css">
+			span{
+				display:block;font-size: 30px;font-weight:800;
+			}
+		</style>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+//$(function(){})相当于window.onload = function(){}
+	//DOM结构加载完成就执行
+	//window.onload :必须等到页面全部内容(图片及外部文件)加载完才能执行
+			$(function(){
+				//dli
+				$("#box span").click(function(){
+					//获取正在操作的索引
+					var index = $(this).index();
+	//siblings():兄弟元素
+	//parent():父级元素
+	//children():儿子元素
+	//eq():所有元素筛选
+					$(this).css("color","red").siblings().css("color","blue")
+					.parent().siblings().children().eq(index)
+					.css("color","red").siblings().css("color","blue");
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<span>明天会更好1</span>
+			<span>明天会更好2</span>
+			<span>明天会更好3</span>
+			<span>明天会更好4</span>
+			<span>明天会更好5</span>
+			<span>明天会更好6</span>
+		</div>
+		<br><br>
+		<div id="box2">
+			<span>明天会更好1</span>
+			<span>明天会更好2</span>
+			<span>明天会更好3</span>
+			<span>明天会更好4</span>
+			<span>明天会更好5</span>
+			<span>明天会更好6</span>
+		</div>
+	</body>
+</html>
