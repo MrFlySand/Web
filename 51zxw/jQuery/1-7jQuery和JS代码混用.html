@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>1-7jQuery和JS代码混用</title>
+		<style type="text/css">
+			span{
+				font-size: 30px;font-weight:800;
+			}
+		</style>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#box").css("color","red");
+				//JS代码
+				document.getElementById("box2").style.color="blue";
+				var a = $("#box").text();
+				var b = document.getElementById("box2").innerText;
+				if(a==b){
+					alert("文本一样");
+				}else{
+					alert("文本不一样");
+				}
+			})		
+		</script>
+	</head>
+	<body>
+		<div id="box">明天会更好1</div>
+		<br><br>
+		<div id="box2">明天会更好2</div>
+	</body>
+</html>
