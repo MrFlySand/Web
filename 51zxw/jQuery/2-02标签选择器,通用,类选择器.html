@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2-2标签选择器,通用,类选择器</title>
+		<!--<script type="text/javascript">
+			window.onload=function(){
+				var aa = document.getElementsByClassName("aa");
+				for (var i = 0;i<aa.length;i++) {
+					aa[i].style.color="red";
+				};
+			}
+		</script>-->
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+//class选择器
+				$(".aa").css("color","red");//所有class元素变成绿色
+//标签选择器		
+				$("div").css("color","blue");//所有div元素变成蓝色
+//通用选择器 	
+				$("*").css("color","yellow");
+			})
+		</script>
+	</head>
+	<body>
+		<div id="a1">明天会更好1</div>
+		<div class="aa">明天会更好2</div>
+		<div class="aa">明天会更好3</div>
+		<div class="aa">明天会更好4</div>
+		<div>明天会更好5</div>
+		<div id="a6">明天会更好6</div>
+		<p>明天会更好7</p>
+		<p>明天会更好8</p>
+	</body>
+</html>
