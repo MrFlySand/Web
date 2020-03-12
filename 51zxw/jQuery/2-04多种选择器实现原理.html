@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2-4多种选择器实现原理</title>
+		<script type="text/javascript">
+			window.onload=function(){
+				//$("#a1").css.("color","red");
+				function $(str){
+					//获取第一个字符
+					var a = str.substring(0,1);
+					//获取从指定的下标开始到结束的字符
+					var b = str.substring(1);
+					//判断到底是哪种选择器
+					if(a=="#"){
+						var e = [document.getElementById(b)];
+					}else if(a=="."){
+						var e = document.getElementsByClassName(b);
+					}
+					else{
+						var e = document.getElementsByTagName(str);
+					};					
+					e.css=function(k,v){
+						for(var i=0;i<e.length;i++){
+							this[i].style[k]=v;
+						}
+					}
+					return e;
+				};
+//				console.log($("#a1"));
+//				console.log($(".aa"));
+//				console.log($("#a6"));
+//				console.log($("*"));
+				$("#a1").css("fontWeight","1000");
+				$(".aa").css("fontSize","40px");
+				$("#a6").css("color","red");
+				$("*").css("margin-left","10px");
+			};
+		</script>
+	</head>
+	<body>
+		<div id="a1">明天会更好1</div>
+		<div class="aa">明天会更好2</div>
+		<div class="aa">明天会更好3</div>
+		<div class="aa">明天会更好4</div>
+		<div>明天会更好5</div>
+		<div id="a6">明天会更好6</div>
+		<p>明天会更好7</p>
+		<p>明天会更好8</p>
+	</body>
+</html>
