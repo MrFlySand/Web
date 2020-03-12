@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2-5后代,并集,交级选择器</title>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+//1. 后代选择器,不仅是子元素
+				$("#box1 p").css("color","red");
+				$("#box2 .aa").css("color","blue");
+//2. 并集选择器
+				$("#box1 p,#box2 div").css("fontSize","40px")
+				$("#box1 .aa,#box2 p").css("fontWeight","1000")
+//3. 交级选择器
+				$("#box1 p.aa").css("color","palevioletred");
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box1">
+			<div class="aa">明天会更好1</div>
+			<div class="aa">明天会更好2</div>
+			<div class="aa">明天会更好3</div>
+			<p class="aa">明天会更好4</p>
+			<p>明天会更好5</p>
+		</div>
+		<div id="box2">
+			<div class="aa">明天会更好6</div>
+			<div class="aa">明天会更好7</div>
+			<div class="aa">明天会更好8</div>
+			<p>明天会更好9</p>
+			<p>明天会更好10</p>
+		</div>
+	</body>
+</html>
