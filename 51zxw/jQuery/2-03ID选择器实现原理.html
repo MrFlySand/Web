@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2-3ID选择器实现原理</title>
+		<script type="text/javascript">
+			window.onload=function(){
+				//$("#a1").css.("color","red");
+				function $(str){
+					//获取从指定的下标开始到结束的字符
+					var b = str.substring(1);
+					var aa = document.getElementById(b);
+					aa.css=function(k,v){
+						this.style[k]=v;
+					}
+					return aa;
+				}
+				console.log($("#a1"));
+				$("#a1").css("fontWeight","1000");
+				$("#a1").css("fontSize","40px");
+				$("#a1").css("color","red");	
+			}
+		</script>
+	</head>
+	<body>
+		<div id="a1">明天会更好1</div>
+		<div class="aa">明天会更好2</div>
+		<div class="aa">明天会更好3</div>
+		<div class="aa">明天会更好4</div>
+		<div>明天会更好5</div>
+		<div id="a6">明天会更好6</div>
+		<p>明天会更好7</p>
+		<p>明天会更好8</p>
+	</body>
+</html>
