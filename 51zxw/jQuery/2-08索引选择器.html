@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2-8索引选择器</title>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#box div:odd").css("color","red");//选中奇数元素
+				$("#box div:even").css("color","blue");//选中偶数元素
+				$("#box div:eq(3)").css("fontSize","50px");//选中给定的索引值
+				$("#box div:gt(3)").css("fontSize","60px");//选中给定的索引值之后的元素
+				$("#box div:lt(3)").css("margin-left","-5px");//选中给定的索引值之前的元素
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div>明天会更好0</div>
+			<div>明天会更好1</div>
+			<div>明天会更好2</div>
+			<div>明天会更好3</div>
+			<div>明天会更好4</div>
+			<div>明天会更好5</div>
+			<div>明天会更好6</div>
+			<div>明天会更好7</div>
+			<div>明天会更好8</div>
+			<div>明天会更好9</div>
+			<div>明天会更好10</div>			
+		</div>
+	</body>
+</html>
