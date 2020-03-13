@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2-9属性选择器</title>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+//1. 选中有指定属性的元素
+				$("#box div[id]").css("color","red");
+				$("#box div[class]").css("color","green");
+				$("#box div[title]").css("color","blue");
+//2. 选中指定属性特定值的元素				
+				$("#box div[id='aa1']").css("fontSize","40px");
+				$("#box div[class='bb1']").css("fontSize","40px");
+				$("#box div[title='cc1']").css("fontSize","40px");
+//3. 选中指定属性不是特定值的属性
+				$("#box div[id!='aa1']").css("margin-left","40px");
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div id="aa1">明天会更好1</div>
+			<div class="bb1">明天会更好2</div>
+			<div title="cc1">明天会更好3</div>
+			<div>明天会更好4</div>
+			<div id="aa2">明天会更好5</div>
+			<div class="bb2">明天会更好6</div>
+			<div title="cc2">明天会更好7</div>
+			<div>明天会更好8</div>			
+		</div>
+	</body>
+</html>
