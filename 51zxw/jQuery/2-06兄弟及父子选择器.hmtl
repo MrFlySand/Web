@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2-6兄弟及父子选择器</title>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+//1. 一般兄弟选择器,选择指定元素之后的所有匹配的兄弟元素,之前选不中
+				//$("#aa2~p").css("color","red");
+				//$("#aa2~div").css("color","blue");
+//2. 相邻兄弟选择器,
+				$("#aa2+div").css("color","blue");
+				//$("#aa2+p").css("color","red");//找不到
+				$(".aa+div").css("fontWeight","1000");
+//3. 父子选择器
+				//$("#box .aa").css("fontSize","40px");
+				$("#box>.aa").css("fontSize","40px");
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div id="aa1">明天会更好1</div>
+			<p id="aa2">明天会更好2</p>
+			<p class="aa">明天会更好22</p>
+			<div id="aa3">明天会更好3</div>
+			<p id="aa4">明天会更好4</p>
+			<p class="aa">明天会更好44</p>
+			<div id="aa5">明天会更好5</div>
+			<p>
+				<span class="aa">明天会更好6</span>
+			</p>
+			
+		</div>
+	</body>
+</html>
