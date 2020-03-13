@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2-7序列选择器</title>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+//选择匹配的第一个子元素
+				$("#box div:first").css("color","red");//选中第一个
+				$("#box div:last").css("color","red");//选中最后一个
+				$("#box div:nth-child(-n+6)").css("color","blue");//选中前6个
+				$("#box div:nth-child(n+4)").css("color","green");//选中后7个
+				$("#box div:nth-child(n+3):nth-child(-n+8)").css("fontSize","50px");//选中从3到8的元素
+				$("#box div:nth-child(2n)").css("color","red");//选中偶数元素
+				$("#box div:nth-child(2n+1)").css("color","orangered");//选中奇数元素
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div>明天会更好1</div>
+			<div>明天会更好2</div>
+			<div>明天会更好3</div>
+			<div>明天会更好4</div>
+			<div>明天会更好5</div>
+			<div>明天会更好6</div>
+			<div>明天会更好7</div>
+			<div>明天会更好8</div>
+			<div>明天会更好9</div>
+			<div>明天会更好10</div>			
+		</div>
+	</body>
+</html>
