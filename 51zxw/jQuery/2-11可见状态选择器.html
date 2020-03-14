@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2-11可见状态选择器</title>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+//visible选中可见元素
+				$("#box div:visible").css("color","red");
+				$("#box input:visible").css("color","blue");
+//hidden选中不可见元素
+				$("#box div:hidden").css("display","block");
+				$("#box input:hidden").css("display","block");
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div>明天会更好1</div>
+			<div style="display:none;">明天会更好2</div>
+			<input type="text" value="名字" />
+			<br>
+			<input type="hidden"value="年龄" />
+		</div>
+	</body>
+</html>
