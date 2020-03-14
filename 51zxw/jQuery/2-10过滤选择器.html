@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2-10过滤选择器</title>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+//1. 选择去除指定选择器的所有元素
+				$("#box div:not([id])").css("color","red");
+				$("#box div:not([class])").css("color","green");
+				$("#box div:not([title])").css("color","blue");
+//2. 选中去除指定属性特定值的元素				
+				$("#box div:not([id='aa1'])").css("fontSize","40px");
+				$("#box div:not([class='bb1'])").css("fontSize","40px");
+				$("#box div:not([title='cc1'])").css("fontSize","40px");
+//3. 选中去除指定属性不是特定值的属性
+				$("#box div:not([id!='aa1'])").css("margin-left","40px");
+				$("#box .dd1:not(p[title='dd2'])").css("color","red")
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div id="aa1">明天会更好1</div>
+			<div class="bb1">明天会更好2</div>
+			<div title="cc1">明天会更好3</div>
+			<div>明天会更好4</div>
+			<div id="aa2">明天会更好5</div>
+			<div class="bb2">明天会更好6</div>
+			<div title="cc2">明天会更好7</div>
+			<div>明天会更好8</div>			
+			<div class="dd1">明天会更好9</div>
+			<p class="dd1" title="dd2">明天会更好10</p>
+			<div class="dd1">明天会更好11</div>
+			<p class="dd1">明天会更好12</p>
+		</div>
+	</body>
+</html>
