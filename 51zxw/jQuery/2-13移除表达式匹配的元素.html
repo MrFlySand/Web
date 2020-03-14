@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2-13移除表达式匹配的元素</title>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+//not()方法移除与指定表达式匹配的集合
+				$("#box div").not(".bb1").css("color","red");
+				$("#box div").not(".bb2").css("fontSize","40px");
+				$("#box div").not("[id]").css("margin-left","40px");
+				$("#box div").not("[class]").css("fontWeight","1000");
+				$("#box div").not("[class='bb1'],[id='aa1'],").css("color","blue");
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div id="aa1">明天会更好1</div>
+			<div class="bb1">明天会更好2</div>
+			<div title="cc1">明天会更好3</div>
+			<div>明天会更好4</div>
+			<div id="aa2">明天会更好5</div>
+			<div class="bb2">明天会更好6</div>
+			<div title="cc2">明天会更好7</div>
+			<div>明天会更好8</div>			
+		</div>
+	</body>
+</html>
