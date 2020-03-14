@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2-15筛选父元素及祖先元素</title>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+//parent()筛选出匹配表达式的父元素,只考虑父元素不会考虑祖先元素
+				$("div.bb").parent().find("span").css("color","red");
+				$("span").parent("p").css("color","blue");
+//parents()筛选出匹配表达式的祖先元素
+				$("span").parents().find(".aa").css("font-size","40px");
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div class="box1">
+				<p>明天会更好1</p>
+				<span class="aa">明天会更好2</span>
+				<p>
+					<span class="bb">明天会更好3</span>
+				</p>
+			</div>
+			<div class="box2">
+				<p>明天会更好4</p>
+				<span class="aa">明天会更好5</span>
+				<div class="bb">明天会更好6</div>
+			</div>			
+		</div>
+		</div>
+	</body>
+</html>
