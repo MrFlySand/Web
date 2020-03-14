@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2-14筛选子元素及后代元素</title>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+//children()筛选出匹配表达式的子元素
+				$("#box").children().css("color","red");
+				$("#box").children(".bb1").css("color","blue");
+				$("#box").children("[id]").css("color","green");
+				$("#box").children("[title='cc1']").css("color","purple");
+				$("#box").children("span").css("fontSize","40px");
+//find()筛选出匹配表达式的后代元素
+				$("#box").find("#aa2").css("fontSize","60px");
+				$("#box").find("span").css("margin-left","60px");
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div id="aa1">明天会更好1</div>
+			<span class="bb1">明天会更好2</span>
+			<p title="cc1">明天会更好3</p>
+			<div>明天会更好4</div>
+			<div>
+				<span id="aa2">明天会更好5</span>
+			</div>
+			<p class="bb2">明天会更好6</p>
+			<div title="cc2">明天会更好7</div>
+			<div>明天会更好8</div>			
+		</div>
+	</body>
+</html>
