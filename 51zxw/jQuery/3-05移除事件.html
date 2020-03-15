@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>3-5移除事件</title>
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			#box{
+				width:200px;height:200px;border:2px solid black;
+				margin:50px auto;
+			}
+			button{
+				width:100px;height:50px;background:red;
+				margin:0 auto;display:block;
+			}
+		</style>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+//				$("#box").on({
+//					click:function(){
+//						console.log("鼠标点击了")
+//					},
+//					mouseenter:function(){
+//						console.log("鼠标移入了")
+//					},
+//					mouseleave:function(){
+//						console.log("鼠标移出了")
+//					}
+//				});
+//off()方法用于移除通过on()方法添加的事件处理程序
+				//$("button").on("click",function(){
+//移除#box绑定的事件
+//					//$("#box").off();//移除所有事件
+//					$("#box").off("click");//移除某个事件
+//					$("#box").off("click mouseenter");//移除多个事件
+//				})
+//只执行一次方法				
+				$("#box").one({
+					click:function(){
+						console.log("鼠标点击了")
+					}
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<div id="box"></div>
+		<button>点击</button>
+	</body>
+</html>
