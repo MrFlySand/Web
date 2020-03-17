@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>3-8指定按键触发事件</title>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+//1. keydown按键按下	
+	//event：正在发生的键盘事件
+	//keyCode：按下的编码 
+				$("input").keydown(function(event){
+					console.log(event.keyCode);
+					if(event.keyCode==13){
+						$("input").css("background","#ccc");
+					}else{
+						$("input").css("background","#fff");
+					};
+				});
+			})
+		</script>
+	</head>
+	<body>
+		姓名:<input type="text" value=""/>
+	</body>
+</html>
