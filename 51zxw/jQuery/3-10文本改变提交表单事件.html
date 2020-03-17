@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>3-10文本改变提交表单事件</title>
+		<style type="text/css">
+			input,button{
+				width:200px;height:50px;
+			}
+		</style>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+//1. change事件,文本发生改变时触发,仅适用于文本域
+				$("input").change(function(){
+					$(this).css("background","#ccc");
+				});
+//2. submit事件,提交表单时触发
+				$("button").submit(function(){
+					var age =$("#age").val();
+					alert("age");
+				});				
+			})
+		</script>
+	</head>
+	<body>
+		姓名:<input type="text" value="张三"/>
+		<br /><br />
+		地址:<input type="text" value="北京"/>
+		<br /><br />
+		年龄:<input type="text" id="age" value=""/>
+		<br /><br />
+		<button type="submit">提交</button>
+	</body>
+</html>
