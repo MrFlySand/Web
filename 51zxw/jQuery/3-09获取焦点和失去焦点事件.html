@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>3-9获取焦点和失去焦点事件</title>
+		<style type="text/css">
+			input,button{
+				width:200px;height:50px;
+			}
+		</style>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+//1. focusin事件,获取焦点时触发
+	//$(this)表示正在操作的元素
+				$("input").focusin(function(){
+					$(this).css("background","#ccc");
+				});
+//2. focusout事件,失去焦点时触发
+				$("input").focusout(function(){
+					$(this).css("background","#fff");
+				});
+			})
+		</script>
+	</head>
+	<body>
+		姓名:<input type="text" value="张三"/>
+		<br /><br />
+		地址:<input type="text" value="北京"/>
+		<br /><br />
+		<button type="submit">提交</button>
+	</body>
+</html>
