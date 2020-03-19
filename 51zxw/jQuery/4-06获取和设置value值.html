@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>4-6获取和设置value值</title>
+		<style type="text/css">
+			input,button{
+				width:200px;height:50px;margin:0 auto;display:block;
+			}
+		</style>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){			
+				$("button").click(function(){
+//1. 获取元素value值						
+					console.log($("#inp1").val());
+					console.log($("#inp2").val());
+//2. 设置元素value值						
+					console.log($("#inp3").val("10"));
+					console.log($("#inp4").val("baidu.com"));					
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<input type="text" id="inp1" value="明天会更好" />
+		<br />
+		<input type="password" id="inp2" value="flysand" />
+		<br />
+		<input type="number" id="inp3" value="0" />
+		<br />
+		<input type="url" id="inp4" value="https://www.baidu.com" />
+		<br />
+		<button>点击</button>
+	</body>
+</html>
