@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>4-7获取索引及元素遍历</title>
+		<style type="text/css">
+			span{
+				display: block;width:200px;line-height:30px;text-align: center;
+				margin-top:20px;background:#ccc;
+			}
+			button{
+				width:200px;height:50px;margin-top:50px;
+			}
+		</style>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+//1. index()方法返回指定元素的索引位置,如果没有找到,index()返回-1
+				//$("#box span").click(function(){
+				//	var index = $(this).index();
+				//	alert(index);
+				//})
+//2. each()方法规定为每个匹配元素规定运行的函数.就是元素遍历(做循环)
+	//运行的函数可以接收正在遍历元素的索引
+				$("button").click(function(){
+					$("#box span").each(function(i){
+						$(this).text("明天会更好"+(i+1));
+						$(this).attr("id","a"+i);
+					})
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<span>明天会更好0</span>
+			<span>明天会更好1</span>
+			<span>明天会更好2</span>
+			<span>明天会更好3</span>
+			<span>明天会更好4</span>
+			<span>明天会更好5</span>
+		</div>
+		<button>点击</button>
+	</body>
+</html>
