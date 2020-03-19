@@ -15,21 +15,26 @@
 				$("input").change(function(){
 					$(this).css("background","#ccc");
 				});
-//2. submit事件,提交表单时触发
-				$("button").submit(function(){
+				//2. submit事件,提交表单时触发
+				$("form").submit(function(){
 					var age =$("#age").val();
-					alert("age");
-				});				
+					if(age<60){
+						alert("领取失败");
+					}
+				});		
 			})
+			
 		</script>
 	</head>
 	<body>
-		姓名:<input type="text" value="张三"/>
-		<br /><br />
-		地址:<input type="text" value="北京"/>
-		<br /><br />
-		年龄:<input type="text" id="age" value=""/>
-		<br /><br />
-		<button type="submit">提交</button>
+		<form action="#" method="get">
+			姓名:<input type="text" value="张三"/>
+			<br /><br />
+			地址:<input type="text" value="北京"/>
+			<br /><br />
+			年龄:<input type="text" id="age" value=""/>
+			<br /><br />
+			<button type="submit">提交</button>	
+		</form>
 	</body>
 </html>
