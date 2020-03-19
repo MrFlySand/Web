@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>4-3获取和设置元素属性</title>
+		<style type="text/css">
+			#box{
+				width:200px;height:200px;border:2px solid black;
+				margin:50px auto;text-align:center;
+			}
+			button{
+				width:200px;height:50px;margin:0 auto;display:block;
+			}
+			.a1{font-size:30px;}
+			.bb1{color:red;}
+			#bb2{font-weight:1000;}
+		</style>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+//1. 获取元素属性
+				//$("button").click(function(){
+				//	var a1 =$("#box p").attr("class");
+				//	var aa1 =$("#box p").attr("title");
+				//	console.log(a1+aa1);
+				//});
+//2. 设置元素属性	
+				$("button").click(function(){
+					//$("#box p").attr("class","bb1");
+					//$("#box p").attr("title","明天会更好");
+					$("#box p").attr({
+						class:"bb1",title:"明天会更好",id:"bb2"
+					});
+					
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<p class="a1" title="aa1">明天会更好1</p>
+			<span>明天会更好2</span>
+		</div>
+		<button>点击</button>
+	</body>
+</html>
