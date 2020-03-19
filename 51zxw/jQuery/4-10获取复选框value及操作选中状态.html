@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>4-10获取复选框value及操作选中状态</title>
+		<style type="text/css">
+			span{
+				display: block;width:200px;line-height:30px;text-align: center;
+				margin-top:20px;background:#ccc;
+			}
+			button{
+				width:200px;height:50px;margin-top:50px;
+			}
+		</style>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("button").click(function(){
+//1. 获取复选框的value值				
+					var sg =[]; 
+					$("input:checkbox:checked").each(function(){
+						sg.push($(this).val());
+					});
+					console.log(sg);
+//2. 设置复选框选中的状态
+					$("input:checkbox").removeAttr("checked").filter("[value='banana'],[value='pears']").attr("checked","checked");
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<!--单选框play-->
+		<input type="radio" name="sex" value="1" checked="checked"/>男
+		<input type="radio" name="sex" value="0" />女
+		<input type="radio" name="sex" value="3" />人妖
+		<!--单选框end-->
+		<br />
+		<!--复选框play-->
+		<input type="checkbox" name="sg[]" value="apple" checked="checked" />苹果
+		<input type="checkbox" name="sg[]" value="banana" />香蕉
+		<input type="checkbox" name="sg[]" value="pears" />梨子
+		<!--复选框end-->
+		<br />
+		<button>点击</button>
+	</body>
+</html>
