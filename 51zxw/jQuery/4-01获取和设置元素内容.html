@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>4-1获取和设置元素内容</title>
+		<style type="text/css">
+			#box{
+				width:200px;height:200px;border:2px solid black;
+				margin:50px auto;text-align:center;
+			}
+			button{
+				width:200px;height:50px;margin:0 auto;display:block;
+			}
+		</style>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+//1. 获取元素中的内容,返回内容包含标签				
+				$("button").click(function(){
+					var a = $("#box").html();
+					console.log(a);
+					var b ="<b>明天会更好3</b>"
+					$("#box").html(b+"<i><br>明天会更好4</i>");
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<p>明天会更好1</p>
+			<span>明天会更好2</span>
+		</div>
+		<button>点击</button>
+	</body>
+</html>
