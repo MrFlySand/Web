@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>4-4删除元素属性及类名</title>
+		<style type="text/css">
+			#box{
+				width:200px;height:200px;border:2px solid black;
+				margin:50px auto;text-align:center;
+			}
+			button{
+				width:200px;height:50px;margin:0 auto;display:block;
+			}
+			.a1{font-size:20px;}
+			.a2{color:red;}
+			.a3{font-weight:1000;}
+			#b1{margin-left:30px;}
+		</style>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+//1. 删除元素属性
+				$("button").click(function(){
+	//a. 删除多个用空格隔开
+					//("#box p").removeAttr("id title");
+//2. 删除元素类名
+	//a. 删除1个
+					//$("#box p").removeClass("a1");
+	//b. 删除多个个
+					//$("#box p").removeClass("a1 a2");
+	//a. 删除全部
+					$("#box p").removeClass();
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<p class="a1 a2 a3" title="aa1" id="b1">明天会更好1</p>
+			<span>明天会更好2</span>
+		</div>
+		<button>点击</button>
+	</body>
+</html>
