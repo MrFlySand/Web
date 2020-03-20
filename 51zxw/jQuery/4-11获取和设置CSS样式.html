@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>4-11获取和设置CSS样式</title>
+		<style type="text/css">
+			#box{
+				width:200px;height:200px;border:2px solid black;
+				margin:50px auto;text-align:center;
+			}
+			button{
+				width:200px;height:50px;margin:0 auto;display:block;
+			}
+			.aa{font-size:30px;}
+			.a1{color:red;}
+		</style>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+//1. 获取css样式
+				$("button").click(function(){
+					var a = $("#box p").css("fontSize");
+					var b = $("#box p").css("fontWeight");
+					console.log(a+b);
+	//获取多个样式
+					var c =	$("#box p").css(["fontSize","color","fontWeight"]);
+					console.log(c);
+//2. 设置css样式
+					$("#box p").css("color","blue");
+	//设置多个样式
+					$("#box p").css({
+						color:"blue",fontSize:"20px"
+					});
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<p class="aa a1" style="font-weight:1000;">明天会更好1</p>
+		</div>
+		<button>点击</button>
+	</body>
+</html>
