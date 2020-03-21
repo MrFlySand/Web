@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>4-21文档处理及复制和删除</title>
+		<style type="text/css">
+			#box{
+				width:200px;height:300px;border:2px solid black;
+				margin:50px auto;text-align:center;
+			}
+			span{display:block;}
+			p{width:200px;height: 30px;margin:20px auto;background:green;}
+			button{
+				width:200px;height:50px;margin:0 auto;display:block;
+			}
+		</style>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){			
+				$("button").click(function(){
+//1. 克隆元素并且选中这些克隆的副本clone()
+					//var a = $("#pp").clone();
+					//$("#box").append(a);
+					//$("#box").append($("#pp").clone());
+//2. 删除元素中的所有子元素empty()
+					//$("#box").empty();
+//3. 删除所有指定的元素remove()
+					//$("#box").remove();
+					//$("#box span").remove();
+					//$("#box span").eq(1).remove();
+					$("#box span").remove(".a2");
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<span>明天会更好0</span>
+			<span>明天会更好1</span>
+			<span class="a2">明天会更好2</span>
+			<span>明天会更好3</span>
+		</div>
+		<p id="pp">我是追加元素</p>
+		<button>点击</button>
+	</body>
+</html>
