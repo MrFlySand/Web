@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>4-22文档处理及替换</title>
+		<style type="text/css">
+			#box{
+				width:200px;height:300px;border:2px solid black;
+				margin:50px auto;text-align:center;
+			}
+			span{display:block;}
+			p{width:200px;height: 30px;margin:20px auto;background:green;}
+			button{
+				width:200px;height:50px;margin:0 auto;display:block;
+			}
+		</style>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){			
+				$("button").click(function(){
+//1. 将每一个匹配的元素替换成指定的内容replaceWith()
+	//替换和被替换的都会消失
+					//$("#box span").replaceWith("<span style='color:red;'>明天会更好</span>");
+					//$("#box span").replaceWith($("#pp"));
+					//$("#box span.a1").replaceWith($("#pp"));
+//2. 用指定的内容替换每一个匹配的元素replaceAll()	
+					//$("<span style='color:red;'>明天会更好</span>").replaceAll($("#box"));
+					$("#pp").replaceAll($("#box span"));
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<span>明天会更好0</span>
+			<span class="a1">明天会更好1</span>
+			<span>明天会更好2</span>
+			<span>明天会更好3</span>
+		</div>
+		<p id="pp">我是追加元素</p>
+		<button>点击</button>
+	</body>
+</html>
