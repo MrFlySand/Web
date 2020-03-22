@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>5-5调整到指定不透明度</title>
+		<style type="text/css">
+			#btn{width:200px;height:40px;display:block;margin:0 auto;}
+			img{
+				display:block;margin:0 auto;
+			}
+		</style>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn").click(function(){
+//淡入淡出:通过透明度(opacity)的变化动态地显示和隐藏元素
+//1. 显示到指定透明度fadeTo(时间,透明度)
+	//a. 时间一定要有
+	//b. 透明度一定要有
+	//c. 切换效果:默认摆动"swing",直线"linear"
+	//d. 动画完成时执行的函数	
+					$("#pict").fadeTo(2000,0.1);
+					//$("#pict").fadeTo(2000,0.8,function(){
+					//	alert("我显示完成了");
+					//});						
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<button id="btn">点击</button>
+		<br /><br />
+		<img src="../images/cbd.jpg" width="500px" id="pict"/>
+	</body>
+</html>
