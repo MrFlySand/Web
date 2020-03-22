@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>5-7动画效果</title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			#btn{width:200px;height:40px;display:block;margin:0 auto;}
+			#box{height:200px;position:relative;}
+			img{width:200px;height:80px;position:absolute;right:0;}
+			#car1{top:0px;}
+			#car2{top:200px;}
+			#box p{
+				width: 20px;height:300px;background:#ccc;position:absolute;
+				right:1200px;top:0;
+			}
+		</style>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn").click(function(){
+//1. 自定义动画animate()自定义动画
+	//a. 一组动画最终样式的属性
+	//b. 速度(动画完成的时间):毫秒数
+	//c. 切换效果:默认变速摆动"swing",匀速"linear"
+	//d. 动画完成时执行的函数	
+					$("#car1").animate({right:"1000px"},2000);
+					//$("#car2").animate({right:"600px"},2000,"swing");
+					$("#car2").animate({right:"1000px"},2000,"linear");
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<button id="btn">点击</button>
+		<br /><br />
+		<div id="box">
+			<img src="../img/car.gif" id="car1"/>
+			<img src="../img/car.gif" id="car2"/>
+			<p></p>
+		</div>
+	</body>
+</html>
