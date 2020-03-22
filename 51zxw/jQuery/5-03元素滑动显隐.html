@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>5-3元素滑动显隐</title>
+		<style type="text/css">
+			#btn{width:200px;height:40px;display:block;margin:0 auto;}
+			img{
+				display:block;margin:0 auto;
+			}
+		</style>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn").click(function(){
+//1. 让元素滑动显示slideDown()					
+					//$("#pict").slideDown();
+					//$("#pict").slideDown(2000);
+					//$("#pict").slideDown(2000,function(){
+					//	alert("我显示完成了");
+					//});
+//2. 让元素滑动隐藏slideUp()					
+					//$("#pict").slideUp();
+					//$("#pict").slideUp(2000);
+					//$("#pict").slideUp(2000,function(){
+					//	alert("我显示完成了");
+					//});
+//3. 让元素自动显隐slideToggle()				
+					//$("#pict").slideToggle();
+					$("#pict").slideToggle(2000);
+					//$("#pict").slideToggle(2000,function(){
+					//	alert("我显示完成了");
+					//});						
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<button id="btn">点击</button>
+		<br /><br />
+		<img src="../images/cbd.jpg" width="500px" id="pict"/>
+	</body>
+</html>
