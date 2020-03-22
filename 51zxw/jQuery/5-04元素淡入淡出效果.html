@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>5-4元素淡入淡出效果</title>
+		<style type="text/css">
+			#btn{width:200px;height:40px;display:block;margin:0 auto;}
+			img{
+				display:block;margin:0 auto;
+			}
+		</style>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn").click(function(){
+//淡入淡出:通过透明度(opacity)的变化动态地显示和隐藏元素
+//1. fadeIn()淡入
+					//$("#pict").fadeIn();
+					//$("#pict").fadeIn(2000);
+					//$("#pict").fadeIn(2000,function(){
+					//	alert("我显示完成了");
+					//});
+//2. fadeOut()淡出
+					$("#pict").fadeOut();
+					//$("#pict").fadeOut(2000);
+					//$("#pict").fadeOut(2000,function(){
+					//	alert("我显示完成了");
+					//}); 
+//3. 让元素自动淡入淡出fadeToggle()				
+					//$("#pict").fadeToggle();
+					$("#pict").fadeToggle(2000);
+					//$("#pict").fadeToggle(2000,function(){
+					//	alert("我显示完成了");
+					//});						
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<button id="btn">点击</button>
+		<br /><br />
+		<img src="../images/cbd.jpg" width="500px" id="pict"/>
+	</body>
+</html>
