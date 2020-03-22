@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>5-1元素显隐效果可选参数</title>
+		<style type="text/css">
+			#btn{width:200px;height:40px;display:block;margin:0 auto;}
+			img{
+				display:none;margin:0 auto;
+			}
+		</style>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn").click(function(){
+//1. 让元素显示
+	//元素显隐效果有三个参数:
+		//a. 速度:慢速"slow",正常"normal",快速"fast",毫秒数
+		//b. 切换效果:默认摆动"swing",直线"linear"	
+					//$("#pict").css("display","block");
+					//$("#pict").show();
+					//$("#pict").show(2000);
+		//c. 动画完成时执行的函数			
+					$("#pict").show(2000,function(){
+						alert("我显示了");
+					});
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<button id="btn">点击</button>
+		<br /><br />
+		<img src="../images/cbd.jpg" width="500px" id="pict"/>
+	</body>
+</html>
