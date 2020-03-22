@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>5-6自定义动画</title>
+		<style type="text/css">
+			#btn{width:200px;height:40px;display:block;margin:0 auto;}
+			img{
+				display:block;margin:0 auto;
+			}
+		</style>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn").click(function(){
+//1. 自定义动画animate()自定义动画
+	//a. 一组动画最终样式的属性
+	//b. 速度(动画完成的时间):毫秒数
+	//c. 切换效果:默认变速摆动"swing",匀速"linear"
+	//d. 动画完成时执行的函数	
+					$("#pict").animate({
+						width:"300px",height:"150px",opacity:"0"
+					},2000,function(){
+						alert("我显示完成了");
+					});
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<button id="btn">点击</button>
+		<br /><br />
+		<img src="../images/cbd.jpg" width="500px" id="pict"/>
+	</body>
+</html>
