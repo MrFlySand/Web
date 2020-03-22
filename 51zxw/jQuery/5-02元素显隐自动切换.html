@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>5-2元素显隐自动切换</title>
+		<style type="text/css">
+			#btn{width:200px;height:40px;display:block;margin:0 auto;}
+			img{
+				display:block;margin:0 auto;
+			}
+		</style>
+		<script src="jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn").click(function(){
+//1. 让元素隐藏
+					//$("#pict").css("display","none");	
+					//$("#pict").hide();//元素隐藏
+					//$("#pict").hide(2000);//2s内隐藏
+					//$("#pict").hide(2000,function(){
+					//	alert("元素隐藏");
+					//});
+//2. 元素显隐切换toggle()
+	//方法一
+					//var a = $("#pict").css("display");//获取id为pict的css样式的display属性
+					//if(a=="none"){
+					//	$("#pict").show();
+					//}else{
+					//	$("#pict").hide();
+					//}
+	//方法二				
+					//$("#pict").toggle();
+					//$("#pict").toggle(2000);
+					$("#pict").toggle(2000,function(){
+						alert("我会自动切换显隐");
+					});
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<button id="btn">点击</button>
+		<br /><br />
+		<img src="../images/cbd.jpg" width="500px" id="pict"/>
+	</body>
+</html>
