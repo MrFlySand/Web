@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>1-10隔行变色</title>
+		<link rel="stylesheet" type="text/css" href="reset.css"/>
+		<style type="text/css">
+			ul{
+				width: 400px;margin: 50px auto;
+			}
+			li:nth-child(2n+2):nth-child(-n+10){
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>明天会更好1</li>
+			<li>明天会更好2</li>
+			<li>明天会更好3</li>
+			<li>明天会更好4</li>
+			<li>明天会更好5</li>
+			<li>明天会更好6</li>
+			<li>明天会更好7</li>
+			<li>明天会更好8</li>
+			<li>明天会更好9</li>
+			<li>明天会更好10</li>
+		</ul>
+	</body>
+</html>
+
+li:nth-child(an+b){
+	color:red;
+}
+a:变化周期,相邻两个元素序号大减小
+n：计数器,从0开始
+b：偏移值,从第几号开始
