@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>9-01媒体查询初识</title>
+		<link rel="stylesheet" type="text/css" href="reset.css"/>
+		<style type="text/css">
+			#aa{
+				width:100px;height:100px;margin:50px auto;
+				background:red;
+			}
+			/*600及600以上是元素的样式*/
+			@media only screen and (min-width: 600px){
+				#aa{
+					background:green;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="aa">
+			
+		</div>
+	</body>
+</html>
+<!--媒体查询media:可以针对不同的媒体类型定义不同的样式-->
+<!--only指定某种特定的媒体类型,可以用来排除不支持媒体查询的浏览器-->	
+<!--screen用于电脑屏幕,平板电脑,智能手机等-->
