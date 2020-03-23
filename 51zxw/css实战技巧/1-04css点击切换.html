@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>1-4css点击切换</title>
+		<style type="text/css">
+			.box{
+				width:300px;height:302px;
+				border:1px solid #000;
+				text-align:center;margin:0 auto;
+				position:relative;
+			}
+			nav{
+				width:300px;height: 30px;
+				border-bottom: 2px solid #000000;
+			}
+			nav a{
+				display: block;width: 100px;height: 28px;
+				line-height:28px;float:left;color:#000;
+			}
+			.content{
+				widows:300px;height:270px;
+				overflow: hidden;position:absolute;
+				left:0;
+			}
+			.cont{
+				width: 300px;height:270px;line-height: 270px;
+				font-size: 40px;color: #fff;
+			}
+			#one{background: red;}
+			#two{background:green;}
+			#three{background:blue;}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<nav>
+				<a href="#one">按键1</a>
+				<a href="#two">按键2</a>
+				<a href="#three">按键3</a>
+			</nav>
+			<div class="content">
+				<div id="one" class="cont">内容1</div>
+				<div id="two" class="cont">内容2</div>
+				<div id="three" class="cont">内容3</div>
+			</div>
+		</div>
+	</body>
+</html>
