@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>1-11外边距击穿</title>
+		<style type="text/css">
+			.box{
+				width:400px;height: 400px;background: red;
+				overflow:hidden;
+			}
+			.zxw{
+				width:200px;height:200px;background:green;
+				margin-top:100px;padding-top:1px ;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="zxw"></div>
+		</div>
+	</body>
+</html>
+相邻的定义为：同级或者嵌套的盒元素，它们之间没有非空内容，并且父元素没有内边距和边框分隔
+如果子元素还是块级元素,不会出现margin击穿问题
+外边距击穿处理方法:
+1.父元素(.box)设置溢出隐藏,overflow:hidden;
+2.给父元素设置内边距padding-top:1px;
+3.父元素设置边框border-top:1px sold #000;
