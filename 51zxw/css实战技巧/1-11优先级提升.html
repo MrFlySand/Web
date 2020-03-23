@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>1-11优先级提升</title>
+		<link rel="stylesheet" type="text/css" href="reset.css"/>
+		<style type="text/css">
+			.a1{
+				color:green;
+			}
+			#a2{
+				color: blue;
+			}
+			p{
+				font-size: 50px;color: red!important;
+			}
+		</style>
+	</head>
+	<body>
+		<p class="a1"id="a2">明天会更好</p>
+	</body>
+</html>
+!important把被修饰的语句的优先级提升到最大,只能提升一条语句,不能提升一个选择器的优先级
