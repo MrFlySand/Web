@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>1-1hover使用技巧</title>
+		<style type="text/css">
+			.a1a{
+				width:400px;height:400px;background:greenyellow;
+			}
+			.a1{
+				width:150px;height: 150px;background:#ff0000;
+			}
+			/*.a1:hover{
+				width:300px;height:300px;background:green ;
+			}*/
+			/*.a1a:hover .a1{width:300px;height:300px;background:green ;}*/
+			/*.a1a:hover .a1 p{color: blue;font-size: 30px;}*/
+			.a2:hover+p{color: blue;font-size: 30px;}/*a2之后的一个p标签改变*/
+			/*.a2:hover~p{color: blue;font-size: 30px;}*//*a2之后的所有p标签改变*/
+		</style>
+	</head>
+	<body>
+		<div class="a1a">
+			<div class="a1">
+				<p>明天会更好</p>
+				<p>明天会更好</p>
+				<p class="a2">明天会更好</p>
+				<p>明天会更好</p>
+				<p>明天会更好</p>
+			</div>
+		</div>
+	</body>
+</html>
