@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>1-8文本溢出显示省略号</title>
+		<style type="text/css">
+			p{
+				width: 202px;height:32px;
+				border:1px solid #000;
+				line-height:30px;margin:100px auto;
+				white-space: normal;/*文本变成一行*/
+				overflow: hidden;/*溢出隐藏*/
+				text-overflow: ellipsis;/*文字溢出时显示省略号*/
+			}
+		</style>
+	</head>
+	<body>
+		<p>明天会更好明天会更好明天会更好
+			明天会更好明天会更好旺仔明天会更好</p>
+	</body>
+</html>
+
