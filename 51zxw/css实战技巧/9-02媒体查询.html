@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>9-02媒体查询</title>
+		<link rel="stylesheet" type="text/css" href="reset.css"/>
+		<style type="text/css">
+			#aa{
+				width:100px;height:100px;margin:50px auto;
+				background:red;
+			}
+			/*600及600以下是元素的样式*/
+			/*@media only screen and (max-width: 600px){
+				#aa{
+					background:green;
+				}
+			}*/
+			/*600~800元素的样式*/
+			/*@media only screen and (min-width: 600px) and (max-width: 800px){
+				#aa{
+					background:blue;
+				}
+			}*/
+			@media only screen and (min-width: 400px){
+				#aa{
+					background:blue;
+				}
+			}
+			@media only screen and (min-width: 600px){
+				#aa{
+					background:green;
+				}
+			}
+			@media only screen and (min-width: 800px){
+				#aa{
+					background:orange;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="aa">
+			and前后一定要有空格
+		</div>
+	</body>
+</html>
