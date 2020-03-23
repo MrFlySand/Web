@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>9-3媒体查询小实例</title>
+		<style type="text/css">
+			.box{
+				width:800px;height:100px;margin:0 auto;
+				background:#ccc;position:relative;
+			}
+			.posi-l{
+				width:200px;height:80px;background:red;position:absolute;
+				top:10px;left:0;
+			}
+			.posi-c{
+				width:260px;height:40px;background:green;position:absolute;
+				top:30px;left:50%;transform:translateX(-50%);
+			}
+			.posi-r{
+				width:100px;height:40px;background:blue;position:absolute;
+				top:30px;right:0;
+			}
+			@media only screen and (min-width:800px) {
+				.box{
+					width:100%;height:80px;
+				}
+				.posi-l{
+					width:120px;height:60px;
+				}
+				.posi-c{
+					display:none;
+				}
+				.posi-r{
+					width:60px;height:30px;top:25px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="box">
+				<div class="posi-l">
+				
+				</div>
+				<div class="posi-c">
+					
+				</div>
+				<div class="posi-r">
+					
+				</div>
+			</div>
+		</header>
+	</body>
+</html>
