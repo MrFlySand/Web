@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>3-9弹性元素的扩展比率</title>
+		<link rel="stylesheet" type="text/css" href="reset.css"/>
+		<style type="text/css">
+			.box{
+				width: 400px;height: 400px;background:bisque;
+				margin:50px auto;overflow:hidden;
+				display:flex;/*转成弹性盒子*/
+				flex-wrap:wrap;
+				/*换行,默认交叉轴正向换行*/
+				flex-wrap: wrap;
+				/*两端对齐,项目之间的间隔都相等*/
+				justify-content:space-between;
+				/*两端对齐,项目之间的间隔都相等*/
+				align-content:space-between;
+			}
+			.a1{
+				width:120px;height: 50px;line-height:50px;
+				text-align: center;color:#fff;
+			}
+			.n1{
+				background:red;width: 50px;
+				flex-grow:1;
+			}
+			.n2{
+				background:blue;width:70px;
+				flex-grow:2;
+			}
+			.n3{
+				background:green;width: 100px;
+				flex-grow:3;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="box">
+			<li class="a1 n1">a1</li>
+			<li class="a1 n2">a2</li>
+			<li class="a1 n3">a3</li>
+		</ul>
+	</body>
+</html>
+设置弹性元素的扩展比率来分配剩余空间
+flex-grow:0;未设置默认值为0
