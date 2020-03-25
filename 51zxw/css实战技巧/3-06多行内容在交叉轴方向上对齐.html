@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>3-6多行内容在交叉轴方向上对齐</title>
+		<link rel="stylesheet" type="text/css" href="reset.css"/>
+		<style type="text/css">
+			.box{
+				width: 400px;height: 400px;background:bisque;
+				margin:50px auto;overflow:hidden;
+				display:flex;/*转成弹性盒子*/
+				flex-wrap:wrap;
+				/*多行子元素在交叉轴方向的对齐方式*/
+				/*开始方向对齐*/
+				/*align-content:flex-start;*/
+				/*结束轴方向对齐*/
+				align-content:flex-end;
+				/*居中对齐*/
+				/*align-content:center;*/
+				/*两端对齐,项目之间的间隔都相等*/
+				/*align-content:space-between;*/
+				/*每个项目两侧的间隔相等,所以,项目之间的间隔比项目与边框的间隔大一倍*/
+				/*align-content:space-around;*/
+				/*默认值,如果项目未设置高度或设为auto,将占满整个容器*/
+				/*align-content:stretch;*/
+			}
+			.a1{
+				width:80px;height: 50px;line-height:50px;background:red;
+				text-align: center;color:#fff;
+			}</style>
+	</head>
+	<body>
+		<ul class="box">
+			<li class="a1">a1</li>
+			<li class="a1">a2</li>
+			<li class="a1">a3</li>
+			<li class="a1">a4</li>
+			<li class="a1">a5</li>
+			<li class="a1">a6</li>
+		</ul>
+	</body>
+</html>
