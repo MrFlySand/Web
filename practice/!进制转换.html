@@ -61,14 +61,18 @@
 				if (!decimalPoint(a)) {
 					console.log("if");
 				} else{
+					b=parseInt(a,2).toString(8);
 					c=parseInt(a,2);
+					d=parseInt(a,2).toString(16);
 				}
 				print(a,b,c,d);				
 			}else if(!isNaN(b)){
 				if (!decimalPoint(b)) {
 					console.log("if");
 				} else{
+					a=parseInt(b,8).toString(2);
 					c=parseInt(b,8);
+					d=parseInt(b,8).toString(16);
 				}
 				print(a,b,c,d);	
 			}else if(!isNaN(c)){
@@ -84,6 +88,8 @@
 				if (!decimalPoint(d)) {
 					console.log("if");
 				} else{
+					a=parseInt(d,16).toString(2);
+					b=parseInt(d,16).toString(8);
 					c=parseInt(d,16);
 				}
 				print(a,b,c,d);	
