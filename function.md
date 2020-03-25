@@ -20,8 +20,12 @@ function into(num){
    var eight = num.toString(8);
    var six = num.toString(16);
    //其他转十进制
-   parseInt(x,2);//二进制转十进制
-   parseInt(x,8);//八进制转十进制
-   parseInt(x,16);//十六进制转十进制
+   parseInt(num,2);//二进制转十进制
+   parseInt(num,8);//八进制转十进制
+   parseInt(num,16);//十六进制转十进制
+   //十六进制转二进制
+   document.write(parseInt(num,16).toString(2)+"<br>");
+   //ASCII码转文本
+   document.write(String.fromCharCode(parseInt(num,10))+"<br>")
 }
 ```      
