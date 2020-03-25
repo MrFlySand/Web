@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>3-4弹性盒子</title>
+		<style type="text/css">
+			.box{
+				width: 400px;height: 400px;background:bisque;
+				margin:50px auto;overflow:hidden;
+				display:flex;/*转成弹性盒子*/
+				flex-direction:row-reverse;
+				/*flex-direction:column-reverse;*/
+				flex-wrap:wrap;
+				/*换行,交叉轴反向换行*/
+				/*flex-wrap:wrap-reverse;*/
+				/*子元素在主轴方向上的对齐方式,默认值,开始方向对齐*/
+				/*justify-content:flex-start;*/
+				/*子元素在主轴方向上的对齐方式,结束方向对齐*/
+				/*justify-content:flex-end;*/
+				/*居中对齐*/
+				/*justify-content:center;*/
+				/*两端对齐*/
+				/*justify-content:space-between;*/
+				/*外边框相同*/
+				justify-content:space-around;
+			}
+			.a1{
+				width:80px;height: 50px;line-height:50px;background:red;
+				text-align: center;color:#fff;margin:10px;
+			}</style>
+	</head>
+	<body>
+		<ul class="box">
+			<li class="a1">a1</li>
+			<li class="a1">a2</li>
+			<li class="a1">a3</li>
+			<li class="a1">a4</li>
+			<li class="a1">a5</li>
+			<li class="a1">a6</li>
+		</ul>
+	</body>
+</html>
