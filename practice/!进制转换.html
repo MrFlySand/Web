@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>进制转换</title>
+	</head>
+<body>	
+	<button type="button" onclick="intoFun()" class="mathematical">1、</button>进制转换<br>
+	<div id="quadratic_equation" class="mathematical" style="display:block;">
+		二进制:<input id="into_numba" placeholder="请输入二进制数"><br />
+		八进制:<input id="into_numbb" placeholder="请输入八进制数"><br />
+		十进制:<input id="into_numbc" placeholder="请输入十进制数"><br />
+		十六进制:<input id="into_numbd" placeholder="请输入十六进制数"><br />
+		<button type="button" onclick="intoSubmit()">提交</button>
+		<button type="button" onclick="emptySubmit()">清空</button>
+	</div>
+	<script type="text/javascript">		
+		//元素的显隐
+		var t =1;
+		function intoFun(){
+			if(t==1){
+				quadratic_equation.style.display="block";
+				t=0;
+			}else{
+				quadratic_equation.style.display="none";
+				t=1;
+			};
+		};
+		//清空
+		function emptySubmit(){
+			document.getElementById("into_numba").value="";
+			document.getElementById("into_numbb").value="";
+			document.getElementById("into_numbc").value="";
+			document.getElementById("into_numbd").value="";
+		};
+		//判断小数点的位置
+		function decimalPoint(num){
+			var x = String(num).indexOf('.')+1;   //小数点的位置
+			var y = String(num).length - x;  //小数的位数
+			if(y > 0){
+			    return true;				    
+			}else{
+				return false;
+			}
+		};
+		//输出
+		function print(a,b,c,d){
+			document.getElementById("into_numba").value=a;
+			document.getElementById("into_numbb").value=b;
+			document.getElementById("into_numbc").value=c;
+			document.getElementById("into_numbd").value=d;
+		};
+		//提交时执行的函数 
+		function intoSubmit(){
+			var a =parseFloat(document.getElementById("into_numba").value);
+			var b =parseFloat(document.getElementById("into_numbb").value);
+			var c =parseFloat(document.getElementById("into_numbc").value);
+			var d =parseFloat(document.getElementById("into_numbd").value);
+			var sumTwo=sumEight=sumTen=sumSix=0;
+			if(!isNaN(a)){
+				if (!decimalPoint(a)) {
+					console.log("if");
+				} else{
+					c=parseInt(a,2);
+				}
+				print(a,b,c,d);				
+			}else if(!isNaN(b)){
+				if (!decimalPoint(b)) {
+					console.log("if");
+				} else{
+					c=parseInt(b,8);
+				}
+				print(a,b,c,d);	
+			}else if(!isNaN(c)){
+				if (!decimalPoint(c)) {
+					console.log("if");
+				} else{
+					a=c.toString(2);
+					b=c.toString(8);
+					d=c.toString(16);
+				}
+				print(a,b,c,d);	
+			}else if(!isNaN(d)){
+				if (!decimalPoint(d)) {
+					console.log("if");
+				} else{
+					c=parseInt(d,16);
+				}
+				print(a,b,c,d);	
+			}else{
+				alert("error");
+			}
+		};
+	</script>
+</body>
+</html>
