@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>3-8设置弹性元素的顺序</title>
+		<link rel="stylesheet" type="text/css" href="reset.css"/>
+		<style type="text/css">
+			.box{
+				width: 400px;height: 400px;background:bisque;
+				margin:50px auto;overflow:hidden;
+				display:flex;/*转成弹性盒子*/
+				flex-wrap:wrap;
+				/*换行,默认交叉轴正向换行*/
+				flex-wrap: wrap;
+				/*两端对齐,项目之间的间隔都相等*/
+				justify-content:space-between;
+				/*两端对齐,项目之间的间隔都相等*/
+				align-content:space-between;
+			}
+			.a1{
+				width:120px;height: 50px;line-height:50px;background:red;
+				text-align: center;color:#fff;
+			}
+			.n1{
+				order:1;
+			}
+			.n2{
+				order:2;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="box">
+			<li class="a1 n1">a1</li>
+			<li class="a1 n1">a2</li>
+			<li class="a1">a3</li>
+			<li class="a1">a4</li>
+			<li class="a1">a5</li>
+			<li class="a1">a6</li>
+			<li class="a1">a7</li>
+			<li class="a1">a8</li>
+			<li class="a1">a9</li>
+		</ul>
+	</body>
+</html>
+设置弹性元素的顺序order:0;默认值0
+元素按照order 属性的值的增序进行布局
+值越小排列越靠前,拥有相同order属性值的元素按照他们在源代码出现的顺序进行布局
