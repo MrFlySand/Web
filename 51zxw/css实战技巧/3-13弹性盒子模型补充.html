@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>3-13弹性盒子模型补充</title>
+		<link rel="stylesheet" type="text/css" href="reset.css"/>
+		<style type="text/css">
+			.box{
+				width:400px;height:400px;margin:50px auto;
+				overflow:hidden;background: red;
+				display:flex;/*转成弹性盒子*/
+				display:inline-flex;/*转成行内弹性盒子*/
+				justify-content:space-between;
+				align-items:center;
+			}
+			.a1{
+				width:100px;line-height:50px;background:red;
+				text-align:center;color:#fff;height:50px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--<ul class="box">
+			<li class="a1">明天会更好1</li>
+			<li class="a1">明天会更好2</li>
+			<li class="a1">明天会更好3</li>
+		</ul>-->
+		<div class="box">
+			<!--<span class="a1">明天会更好</span>
+			<span class="a1">明天会更好</span>
+			<span class="a1">明天会更好</span>-->
+			<img class="a1" src="../images/cbd.jpg"/>
+			<img class="a1" src="../images/cbd.jpg"/>
+			<img class="a1" src="../images/cbd.jpg"/>
+		</div>
+		<div class="box">
+			<!--<span class="a1">明天会更好</span>
+			<span class="a1">明天会更好</span>
+			<span class="a1">明天会更好</span>-->
+			<img class="a1" src="../images/cbd.jpg"/>
+			<img class="a1" src="../images/cbd.jpg"/>
+			<img class="a1" src="../images/cbd.jpg"/>
+		</div>
+	</body>
+</html>
+1.弹性盒子中的项目可以是块级元素,行内块级元素
+2.行内块级元素在弹性盒子中可以设置宽度
