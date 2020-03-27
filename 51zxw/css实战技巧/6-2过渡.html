@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>6-2过渡</title>
+		<link rel="stylesheet" type="text/css" href="reset.css"/>
+		<style type="text/css">
+			.box{
+				width:100px;height:100px;background:red;
+				margin:100px auto;
+				transition-property:width,background;/*会过渡的属性名*/
+				transition-duration:2s;/*过渡时间1s=1000ms*/
+			}
+			.box:hover{
+				width:500px;height:300px;
+				background:blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+	</body>
+</html>
