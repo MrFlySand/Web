@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>6-4过渡延迟时间</title>
+		<link rel="stylesheet" type="text/css" href="reset.css"/>
+		<style type="text/css">
+			.box{
+				width:100px;height:100px;background:red;
+				margin:100px auto;
+				transition-property:width,height,background;/*会过渡的属性名*/
+				transition-duration:2s,4s,6s;/*宽2s过渡,高4s过渡,颜色6s*/
+				transition-delay:500ms,1s,2s;/*过渡延迟时间*/
+				transition-timing-function:linear,linear,ease;/*慢速开始和结束的过渡效果*/
+			}
+			.box:hover{
+				width:500px;height:300px;
+				background:blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+	</body>
+</html>
