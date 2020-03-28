@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>6-9动画绑定</title>
+		<link rel="stylesheet" type="text/css" href="reset.css"/>
+		<style type="text/css">
+			.box{
+				width:100px;height:100px;background:red;
+				margin:100px auto;
+				/*animation:绑定动画的名称 动画完成的时间 速度曲线 延迟开始时间*/
+				animation:a1 10s linear 3s;
+			}
+			/*用于创建一个动画,动画名称自己设置*/
+			@keyframes a1{
+				0%{width:100px;height:100px;background:red;}
+				30%{width:400px;height:400px;background:green;}
+				50%{width:400px;height:400px;background:green;}
+				100%{width:500px;height:500px;background:blue;}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+	</body>
+</html>
