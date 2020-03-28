@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>8-10钟表转动</title>
+		<link rel="stylesheet" type="text/css" href="reset.css"/>
+		<style type="text/css">
+			.sj{
+				width:750px;height:750px;border-radius:50%;
+				margin:50px auto;position:relative;overflow:hidden;
+			}
+			.lp img{
+				width:750px;height:750px;position:absolute;
+				left:0;top:0;
+			}
+			/*.lpsz{
+				animation: lpsz1 86400s linear infinite;
+			}
+			.lpfz{
+				animation: lpfz2 3600s linear infinite;
+			}
+			.lpmz{
+				animation: lpmz3 30s linear infinite;
+			}
+			@keyframes lpsz1{
+				0%{transform:rotateZ(360deg);}
+				100%{transform:rotateZ(0deg);}
+			}
+			@keyframes lpfz2{
+				0%{transform:rotateZ(360deg);}
+				100%{transform:rotateZ(0deg);}
+			}
+			@keyframes lpmz3{
+				0%{transform:rotateZ(360deg);}
+				100%{transform:rotateZ(0deg);}
+			}*/
+			
+			
+			.sj .zp1{
+				width:150px;height:150px;border-radius:50%;
+				margin:50px auto;position:absolute;left:210px;top:160px;
+				background:url(../images/表盘.jpg) 0 0/100%;
+			}
+			.zp1 img{
+				width:150px;height:150px;top:0;left:0;position:absolute;
+			}
+			.sj .zp2{
+				width:150px;height:150px;border-radius:50%;
+				margin:50px auto;position:absolute;left:390px;top:160px;
+				background:url(../images/表盘2.jpg) 0 0/100%;
+			}
+			.zp2 img{
+				width:150px;height:150px;top:0;left:0;position:absolute;
+			}
+			.sj .zp3{
+				width:150px;height:150px;border-radius:50%;
+				margin:50px auto;position:absolute;left:210px;top:340px;
+				background:url(../images/表盘3.jpg) 0 0/100%;
+			}
+			.zp3 img{
+				width:150px;height:150px;top:0;left:0;position:absolute;
+			}
+			.sj .zp4{
+				width:150px;height:150px;border-radius:50%;
+				margin:50px auto;position:absolute;left:390px;top:340px;
+				background:url(../images/表盘4.png) 0 0/100%;
+			}
+			.zp4 img{
+				width:150px;height:150px;top:0;left:0;position:absolute;
+			}
+			/*.sz{animation:sz 86400s linear infinite;}
+			.fz{animation:fz 3600s linear infinite;}
+			.mz{animation:mz 60s linear infinite;}
+			@keyframes sz{
+				0%{transform:rotateZ(0deg);}
+				100%{transform:rotateZ(360deg);}
+			}
+			@keyframes fz{
+				0%{transform:rotateZ(0deg);}
+				100%{transform:rotateZ(360deg);}
+			}
+			@keyframes mz{
+				0%{transform:rotateZ(0deg);}
+				100%{transform:rotateZ(360deg);}
+			}*/
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			window.onload=function(){
+				function szzd(){
+				var myDate = new Date;
+				var hh=myDate.getHours();//获取多少小时
+				var h=hh<12?hh:hh-12;
+				var m=myDate.getMinutes();//获取多少分钟
+				var s=myDate.getSeconds();//获取多少秒
+				document.getElementById("mz").style.transform = "rotateZ("+s*6+"deg)";
+				document.getElementById("fz").style.transform = "rotateZ("+(m*6+s*0.1)+"deg)";
+				document.getElementById("sz").style.transform = "rotateZ("+(h*30+m*0.5)+"deg)";
+				}
+				szzd ();
+				setInterval(szzd,1000);
+			}
+		</script>
+		<div class="sj">
+			<div class="lp">
+				<img id="lpsz" src="../images/罗盘1 (1).png"/>
+				<img id="lpfz" src="../images/罗盘1 (2).png"/>
+				<img id="lpmz" src="../images/罗盘1 (3).png"/>
+			</div>
+			<div class="zp1">
+				<img id="mz" src="../images/秒针.png"/>
+				<img id="fz" src="../images/分针.png"/>
+				<img id="sz" src="../images/时针.png"/>
+			</div>	
+			<div class="zp2">
+				<img id="mz" src="../images/秒针.png"/>
+				<img id="fz" src="../images/分针.png"/>
+				<img id="sz" src="../images/时针.png"/>
+			</div>	
+			<div class="zp3">
+				<img id="mz" src="../images/秒针.png"/>
+				<img id="fz" src="../images/分针.png"/>
+				<img id="sz" src="../images/时针.png"/>
+			</div>	
+			<div class="zp4">
+				<img id="mz" src="../images/秒针.png"/>
+				<img id="fz" src="../images/分针.png"/>
+				<img id="sz" src="../images/时针.png"/>
+			</div>	
+		</div>
+	</body>
+</html>
