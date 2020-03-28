@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>8-4扫光文字效果</title>
+		<link rel="stylesheet" type="text/css" href="reset.css"/>
+		<style type="text/css">
+			.box{
+				width:300px;height:260px;margin:100px auto;position:relative;
+				border-radius:10px;box-shadow:0 0 3px 3px #ccc;overflow:hidden;
+			}
+			.box img{
+				width:300px;height:230px;
+			}
+			.box span{
+				display:block;line-height:30px;padding-left:10px;transition:transform 300ms;
+			}
+			.box:hover span{
+				transform:translateX(20px);
+			}
+			.box .sgt{
+				width:30px;height:260px;background:rgba(255,255,0,0.3);left:-110px;top: 0;
+				position: absolute;transform: skewX(-30deg);
+			}
+			.box:hover .sgt{
+				left:380px;position: absolute;transition:left 1s;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<img src="../images/cbd.jpg"/>
+			<span>CSS层叠样式表基础</span>
+			<div class="sgt"></div>
+		</div>
+	</body>
+</html>
+
