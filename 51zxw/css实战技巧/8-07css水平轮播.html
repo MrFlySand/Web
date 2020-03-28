@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>8-7css水平轮播</title>
+		<link rel="stylesheet" type="text/css" href="reset.css"/>
+		<style type="text/css">
+			.content{
+				background:#144c65;margin-top:100px;
+				animation:bg 15s linear infinite;
+			}
+			.box{
+				width:800px;height:300px;margin:0 auto;position:relative;
+				overflow:hidden;
+			}
+			.box .slide{
+				width:400%;height:100%;position:absolute;
+				top:0px;left:0px;animation:slide 15s linear infinite;
+			}
+			.content:hover,.content:hover .slide{
+				animation-play-state:paused;/*鼠标移入时,幻灯片暂停*/
+			}
+			.box .slide a{
+				display:block;width:25%;height:100%;float:left;
+			}
+			.box .slide a img{
+				width:100%;height:100%;
+			}
+			@keyframes slide{
+				0%{left:0;}
+				20%{left:0;}
+				33%{left:-100%;}
+				53%{left:-100%;}
+				67%{left:-200%;}
+				87%{left:-200%;}
+				100%{left:-300%;}
+			}
+			@keyframes bg{
+				0%{background:linear-gradient(90deg,#017fd4,#00aee3);}
+				20%{background:linear-gradient(90deg,#017fd4,#00aee3);}
+				30%{background:linear-gradient(90deg,#bec8e4,#9ea7c5);}
+				53%{background:linear-gradient(90deg,#bec8e4,#9ea7c5);}
+				64%{background:linear-gradient(90deg,#abb6b9,#9aa2a6);}
+				87%{background:linear-gradient(90deg,#abb6b9,#9aa2a6);}
+				100%{background:linear-gradient(90deg,#017fd4,#00aee3);}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<div class="box">
+				<div class="slide">
+					<a href="#"><img src="../images/cbd.jpg"/></a>
+					<a href="#"><img src="../images/shuijiao.jpg"/></a>
+					<a href="#"><img src="../images/yuantiao.jpg"/></a>
+					<a href="#"><img src="../images/cbd.jpg"/></a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
