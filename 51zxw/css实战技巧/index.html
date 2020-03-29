@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+		<script src="../javascript/jquery-3.4.1.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				var i = 0;
+				var sd =$(".slideshow .box a");
+				function rota(){
+					i++;
+					if (i==sd.length) {i=0;}
+					sd.eq(i).addClass("rota1").removeClass("rota2");
+					sd.eq(i).siblings("a").addClass("rota2").removeClass("rota1");
+				}
+				setInterval(rota,5000);
+			})
+		</script>
+		<title>10-1移动端布局</title>
+	</head>
+	<body>
+		<!--头部play-->
+		<header>
+			<a href="#" class="left"></a>
+			<a href="#" class="right"></a>
+			<form class="search" method="post">
+					<input class="input-1 fl" type="text" placeholder="please enter..."/>
+					<input class="input-r fr" type="submit" value="搜索"/>
+			</form>	
+		</header>
+		<!--头部end-->
+		<!--幻灯片play-->
+		<div class="slideshow">
+			<div class="box">
+				<a href="http://shua9.97vi.cn/">
+					<img src="../pictures/slid2.png"/>
+				</a>
+				<a href="#" class="rota1">
+					<img src="../pictures/slid1.png"/>
+				</a>
+			</div>
+		</div>
+		<!--幻灯片end-->
+		<!--图片导行play-->
+		<div class="pictGuide">
+			<nav>
+				<a href="#">
+					<p class="back1"></p>
+					<h3>电脑办公</h3>
+				</a>
+				<a href="#">
+					<p class="back2"></p>
+					<h3>电脑办公</h3>
+				</a>
+				<a href="#">
+					<p class="back3"></p>
+					<h3>电脑办公</h3>
+				</a>
+				<a href="#">
+					<p class="back4"></p>
+					<h3>电脑办公</h3>
+				</a>
+				<a href="#">
+					<p class="back5"></p>
+					<h3>电脑办公</h3>
+				</a>
+			</nav>
+		</div>
+		<!--图片导行end-->
+		<!--职业选课play-->
+		<div class="zyxk">
+			<a href="#">
+				<img src="../pictures/classify.png" width="100%"/>
+		 	</a>
+		</div>
+		<!--职业选课end-->
+		<!--课程区块play-->
+		<div class="text-box">
+			<div class="title">
+		 		<span class="fl">最新课程</span>
+				<a href="#" class="fr">更多>></a>
+			</div>
+			<div class="content">
+				<a href="#">
+					<img src="../pictures/290.jpg"/>
+					<h2>3D max</h2>
+					<p>共<span class="num1">150</span>小节已有<span class="num2">100</span>人学过</p>
+				</a>
+				<a href="#">
+					<img src="../pictures/30.jpg"/>
+					<h2>3D max</h2>
+					<p>共<span class="num1">150</span>小节已有<span class="num2">100</span>人学过</p>
+				</a>
+				<a href="#">
+					<img src="../pictures/321.jpg"/>
+					<h2>3D max</h2>
+					<p>共<span class="num1">150</span>小节已有<span class="num2">100</span>人学过</p>
+				</a>
+				<a href="#">
+					<img src="../pictures/337.jpg"/>
+					<h2>3D max</h2>
+					<p>共<span class="num1">150</span>小节已有<span class="num2">100</span>人学过</p>
+				</a>				
+			</div>
+		</div>
+		<!--课程区块end-->
+		<!--影视动画play-->
+		<div class="text-box">
+			<div class="title">
+		 		<span class="fl">影视制做</span>
+				<a href="#" class="fr">更多>></a>
+			</div>		
+			<div class="content">
+				<a style="width: 100%;" href="#">
+					<img src="../pictures/362.jpg" style="width:100%;"/>
+					<h2>PR 2019</h2>
+					<p>共<span class="num1">150</span>小节已有<span class="num2">100</span>人学过</p>
+				</a>
+				<a href="#">
+					<img src="../pictures/290.jpg"/>
+					<h2>3D max</h2>
+					<p>共<span class="num1">150</span>小节已有<span class="num2">100</span>人学过</p>
+				</a>
+				<a href="#">
+					<img src="../pictures/455.jpg"/>
+					<h2>3D max</h2>
+					<p>共<span class="num1">150</span>小节已有<span class="num2">100</span>人学过</p>
+				</a>
+				<a href="#">
+					<img src="../pictures/30.jpg"/>
+					<h2>3D max</h2>
+					<p>共<span class="num1">150</span>小节已有<span class="num2">100</span>人学过</p>
+				</a>
+				<a href="#">
+					<img src="../pictures/524.jpg"/>
+					<h2>3D max</h2>
+					<p>共<span class="num1">150</span>小节已有<span class="num2">100</span>人学过</p>
+				</a>				
+			</div>
+		</div>
+		<!--影视动画end-->
+		<!--尾部区块play-->
+		<div class="foot">
+			<p><span>我是有底线的</span></p>
+			<hr />
+			<div>飞沙2020-03-28@
+				<a href="#">电脑版</a>
+			</div>
+		</div>
+		<!--尾部区块end-->
+		<div style="width:100%; height: 60px;"></div>
+		<!--底部导行play-->
+		<footer>
+			<nav>
+				<a href="#">
+					<p class="back1"></p>
+					<h3>首页</h3>
+				</a>
+				<a href="#">
+					<p class="back2"></p>
+					<h3>网站</h3>
+				</a>
+				<a href="#">
+					<p class="back3"></p>
+					<h3>推荐</h3>
+				</a>
+				<a href="#">
+					<p class="back4"></p>
+					<h3>我</h3>
+				</a>
+			</nav>
+		</footer>
+		<!--底部导行end-->
+	</body>
+</html>
