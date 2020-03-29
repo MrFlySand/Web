@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>8-13扑克牌翻转</title>
+		<link rel="stylesheet" type="text/css" href="reset.css"/>
+		<style type="text/css">
+			#box{
+				width:800px;height:300px;margin:100px auto;
+				background:#ccc;display:flex;justify-content:space-between;
+			}
+			.pk{
+				width:200px;height:300px;position:relative;
+			}
+			.pkbm,.pkzm{
+				width:200px;height:300px;position:absolute;float:left;top:0;left:0;
+				border:3px black solid;transition:transform 1s;
+			}
+			.pkbm{
+				background:url(../images/扑克牌.png) no-repeat 100% 100%/1100% 500%;
+				backface-visibility:hidden;/*当元素没有面向屏幕时隐藏*/
+			}
+			.pkzm{
+				background:url(../images/扑克牌.png) no-repeat 40% 25%/1100% 500%;
+				transform:rotateY(180deg);
+			}
+			.pk:hover .pkzm{
+				transform:rotateY(0deg);
+			}
+			.pk:hover .pkbm{
+				transform:rotateY(180deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div class="pk">
+				<div class="pkzm"></div>
+				<div class="pkbm"></div>
+			</div>
+			<div class="pk">
+				<div class="pkzm"></div>
+				<div class="pkbm"></div>
+			</div>
+			<div class="pk">
+				<div class="pkzm"></div>
+				<div class="pkbm"></div>
+			</div>	
+		</div>
+	</body>
+</html>
