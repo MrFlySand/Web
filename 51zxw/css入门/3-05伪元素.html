@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>3-5伪元素</title>
+		<style type="text/css">
+			div::before{
+			color: red;
+			font-size: 20px;
+			content: "会好的明天";
+		}
+		</style>
+	</head>
+	<body>
+		<div>明天会更好</div>
+	</body>
+</html>
+::before在元素内容之前添加新的内容，必须配合content使用
+::after在元素内容之后添加新的内容，必须配合content使用
