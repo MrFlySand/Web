@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2-9nth-child选择器</title>
+		<style type="text/css">
+			li:nth-child(5){color: red;}/*选择的是li的父元素中的第5个li元素*/
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>明天会更好1</li>
+			<li>明天会更好2</li>
+			<li>明天会更好3</li>
+			<li>明天会更好4</li>
+			<li>明天会更好5</li>
+			<li>明天会更好6</li>
+			<li>明天会更好7</li>
+			<li>明天会更好8</li>
+			<li>明天会更好9</li>
+			<li>明天会更好10</li>
+		</ul>		
+	</body>
+</html>
+li:nth-child(2n+1){color: blue;}/*选择的是li的父元素中的n个奇数li元素*/
+li:nth-child(-n+6){color: chocolate;/*选择的是li的父元素中前6个li元素*/}
+li:nth-child(n+1){color: chocolate;/*选择的是li的父元素中从第4个开始的所有个li元素*/}
+li:nth-child(n+3):nth-child(-n+6){color: chocolate;}/*第3个开始,第6个结束*/
+li:nth-child(3n+1):nth-child(-n+6){color: chocolate;}/*1,4,7,10,13*/
+li:nth-child(3n+1):nth-child(-n+7){color: chocolate;}/*1,4,7*/
