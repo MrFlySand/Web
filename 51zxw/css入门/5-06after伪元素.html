@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>5-6after伪元素</title>
+		<style type="text/css">
+			ul{
+				width: 200px;
+				margin:1 auto;
+			}
+			ul li{
+				width: 200px;/*线条长度*/
+				height: 50px;/*文字线条的高距*/
+				line-height: 20px;/*文字距线条的高度*/
+				text-align: center;/*文字位于线条的位置*/
+			}
+			li::after{/*文字之后*/
+			display:block ;
+			content: "";/*添加空的内容*/
+			border-bottom: 2px solid red;/*线条粗细 线条颜色*/
+		}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>明天会更好1</li>
+			<li>明天会更好2</li>
+			<li>明天会更好3</li>
+			<li>明天会更好4</li>
+			<li>明天会更好5</li>
+		</ul>
+	</body>
+</html>
