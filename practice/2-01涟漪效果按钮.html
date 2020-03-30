@@ -59,18 +59,27 @@
 	</head>
 	<body>
 		<a href="#">BUTTON</a>
-		<a href="#">BUTTON</a>
-		
+		<a href="#">BUTTON</a>		
 		<script type="text/javascript">
+			//const定义的变量不可以修改，而且必须初始化
 			const buttons = document.querySelectorAll('a');
+			//forEach遍历每个buttons元素
 			buttons.forEach(btn => {
+				//addEventListener(click) 方法来向按钮添加点击事件
 				btn.addEventListener('click',function(e){
+					//let是块级作用域，函数内部使用let定义后，对函数外部无影响
+					//client定位鼠标的位置,X代表横轴,Y代表竖轴
+					//target鼠标点击事件,offse鼠标位置到元素的边距,Left代表横轴,Top代表竖轴
 					let x = e.clientX - e.target.offsetLeft;
-					let y = e.clientX - e.target.offsetTop;					
+					let y = e.clientY - e.target.offsetTop;	
+					//createElement,单击元素创建span元素
 					let ripples = document.createElement('span');
 					ripples.style.left =x+ 'px';
 					ripples.style.top =y+ 'px';
+					//appendChild(ripples)把ripples元素节点添加到点击元素节点中成为其子节点，但是放在点击元素的现有子节点的最后
 					this.appendChild(ripples);
+					//setTimeout(x,y)在y毫秒内执行完x中的语句,可以是函数
+					//remove删除:ripples
 					setTimeout(()=>{
 						ripples.remove()
 					},500);
