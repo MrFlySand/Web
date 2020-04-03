@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>9-9溢出隐藏</title>
+		<style type="text/css">
+			div{
+				width:400px;height:200px;
+				border:2px solid red;
+				/*overflow:visible;*/
+				overflow:hidden;
+				overflow:scroll;
+				overflow:auto;
+			}			
+		</style>
+	</head>
+	<body>
+		<div>
+			<img src="../../个人主页/飞沙头像.jpg" width="300px" />
+		</div>
+	</body>
+</html>
+
+overflow属性是规定内容溢出了元素框时发生的事情
+visible:内容不会补修剪，会显示在元素框之外 默认值
+hidden:内容会补修剪，溢出的内容不可见
+socoll:内容不会补修剪，会显示滚动条，以便查出溢出的内容
+auto:当内容大于元素框时，内容会被修剪，会显示滚动条，以便查看溢出的内容。当内容小于元素框时，不会显示滚动条。
+
