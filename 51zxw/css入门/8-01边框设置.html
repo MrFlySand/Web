@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>8-1边框设置</title>
+		<style type="text/css">
+			div{
+				width:200px;height:100px;
+				line-height: 100px;
+				text-align: center;/*文字位置*/
+				background-color: greenyellow;
+				/*border-top:4px green solid;
+				border-bottom:4px green solid;
+				border-left:4px red solid;
+				border-right:4px red solid;*/
+				border:4px green solid;
+			}
+		</style>
+	</head>
+	<body>
+		<div>明天会更好</div>
+	</body>
+</html>
+边框4大要素：
+1.边框宽度:可以使用合法的尺寸单位：px em rem 不能使用%
+2.边框颜色:可以使用颜色名 16进制颜色 rgb颜色 rgba颜色
+3.边框样式:solid实线,dashed虚线,double双线,dotted点状线
+4.边框方向:写在属性名中,在border-之后,top上,botton下,left左,right右
+边框设置：
+语法：border-边框方向：边框宽度 边框颜色 边框样式;属性之间有空格隔开,属性值可以互换位置
+4个方向设置一样的边框,border:框宽度 边框颜色 边框样式;
