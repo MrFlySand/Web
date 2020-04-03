@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>8-5圆角边框</title>
+		<style type="text/css">
+			div{
+				width:200px;height:200px;
+				line-height: 100px;
+				text-align: center;/*文字位置*/
+				background-color: greenyellow;
+				border:4px green solid;
+				/*border-top-left-radius:20px 20px;
+				border-bottom-right-radius:20px;*/
+				/*border-top-left-radius:20px 20px;*/
+				border-top-left-radius:50%;
+				border-top-right-radius:50%;
+				border-bottom-left-radius:50%;
+				border-bottom-right-radius:50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>
+border圆角方向:
+方向1:上下  方向2:左右  
+注意:先水平半径 再垂直半径
+垂直方向:上top 下bottom
+水平方向:左left 右right
+水平半径和垂直半径的值:可以使用合法的尺寸单位.还可以使用%,%相对于水平半径和垂直半径
+圆角半径:
+水平半径 垂直半径
+圆角半径设置成一个值时，另一个值和设置的值一样
+同时设置4个圆角边框
+border-radius:上左角 上右角 下左角 下右角
+border-radius: 50% 50% 50% 50%;
+border-radius:上左角和下右角 上右角 下左角
+border-radius: 10% 30%;
