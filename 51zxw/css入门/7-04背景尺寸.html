@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>7-4背景尺寸</title>
+		<style type="text/css">
+			div{
+				width:400px;/*可以显示的图片宽度*/
+				height:300px;/*可以显示的图片高度*/
+				background-color:blue;
+				background-image:url(../../个人主页/飞沙头像.jpg);
+				background-repeat:no-repeat;
+				/*background-size: 200px 80px;*//*每张图片的大小*/
+				/*background-size: 5em 5em;*/
+				/*background-size: 20% 25%;*/
+				/*background-size: contain;*/
+				/*background-size:cover;*/
+				background-size: 300px;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>
+
+背景尺寸：
+background-size:宽度 高度;
+1.尺寸单位，背景图片的宽度和高度就是一个固定值
+%以父元素的百分比来设置图片的宽度和高度
+contain把背景图片扩展至最大尺寸，使宽度或高度完成适用内容区
+cover把背景图片扩展到足够大，使背景图片完全覆盖背景区域。保持原来的宽高比
+当只设置一个值时，第2个值是auto，图片不会变形，会保持原来的宽高比例
