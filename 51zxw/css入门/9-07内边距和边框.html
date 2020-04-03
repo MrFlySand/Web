@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>9-07内边距和边框</title>
+		<style type="text/css">
+			.div-a0{
+				width:200px;height:200px;
+				background: yellowgreen;
+				padding: 4px;
+				border:20px solid green;
+				float: left;
+				box-sizing: border-box;/*正常情况下*/
+				-moz-box-sizing: border-box;/*火狐浏览器*/
+				-webkit-box-sizing: border-box;/*google浏览器*/
+			}
+			.div-a1{
+				width:200px;height:200px;
+				background:red;
+				padding: 4px;
+				border:5px solid darkred;
+				float: left;
+				box-sizing: border-box;/*正常情况下*/
+				-moz-box-sizing: border-box;/*火狐浏览器*/
+				-webkit-box-sizing: border-box;/*google浏览器*/
+			}
+
+			.img-a0{
+				width:100%;height: 100%;
+				
+			}
+			.img-a1{
+				width:100%;height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div-a0">
+			<img class="img-a0" src="../../个人主页/飞沙头像.jpg"/>
+		</div><div class="div-a1">
+			<img class="img-a1" src="../../个人主页/飞沙头像.jpg"/>
+		</div>
+	</body>
+</html>
+
+正常情况下，内边框和外边框是在元素设置的宽度和高度之外进行绘制
+box-sizing:content-box|border-box;
+conter-box:内边框和边框是在元素设置的宽度和高度之外进行绘制
+boder-box:内边框和边框是在元素设置的宽度和高度之内进行绘制
+设置的宽度=左边框+右边框+左内边框+右内边框+元素内容的宽度
+设置的高度=上边框+下边框+上内边框+下内边框+元素内容的高度
+-moz-box-sizing: border-box;/*火狐浏览器*/
+-webkit-box-sizing: border-box;/*google浏览器*/
+box-sizing: border-box;/*正常情况下*/
+
+
