@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>9-04边框距</title>
+				<style type="text/css">
+			.lou{
+				width:80px;height: 100px;
+				background: blue;
+				margin: 10px 10px 10px 10px;
+				color: white;
+			}
+			.lou1{
+				width:80px;height: 200px;
+				background: blueviolet;float: left;
+				margin: 10px 10px 10px 10px;
+			}
+			.lou2{
+				width:80px;height: 300px;
+				background:brown;float:left;
+				margin: 10px 10px 10px 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="background:red;height: 50px;"></div>
+		<div class="lou">厨房</div>
+		<div class="lou1">房间1</div>
+		<div class="lou2">大客厅</div>
+		<div style="background:black;height: 50px;clear: left;"></div>
+	</body>
+</html>
+
+元素上下排列时,上下边距会合并(上下外边距会取最大值)
+元素左右排列时,左右边框会叠加(左右外边距会相加)
+行级元素只有左右外边距,没有上下外边距
+块级元素和行内块级元素的外边距4个方向都有效
