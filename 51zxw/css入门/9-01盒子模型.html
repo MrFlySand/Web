@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>9-1盒子模型</title>
+		<style type="text/css">
+			.lou{
+				width:500px;height: 100px;
+				background: blue;
+				/*margin-top:50px;
+				margin-bottom:50px;
+				margin-right: 50px;
+				margin-left: 50px;*/
+				margin: 10px 10px 10px 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="background:red;height: 50px;"></div>
+		<div class="lou"></div>
+		<div style="background:black;height: 50px;"></div>
+	</body>
+</html>
+
+盒子模型:
+所有元素都可以有宽高
+所有元素都一个矩形
+所有元素都可以看成一个盒子
+盒子包括,外边框+边框+内边框+元素内容
+边框方向:top bottom left right
+外边距尺寸:合法的尺寸单位,百分比
+外边距语法:
+margin-方向:外边距尺寸
+margin: 10px 10px 10px 10px;顺时针
+margin: 10px 10px;上下 左右
+margin: 10px;四个方向一样的外边距
+使用%时,参考的量父级的尺寸
+可以使用正值和负值
