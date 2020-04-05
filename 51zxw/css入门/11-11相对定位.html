@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>11-11相对定位</title>
+		<style type="text/css">
+			.aa1{
+				width:300px;height:300;
+				border:1px solid black;
+				margin:50px;
+				font-size:40px;
+				color:white;
+			}
+			.a1,.a2,.a3{
+				width:100px;height:100px;
+			}
+			.a1{background:red;}
+			.a2{
+				background:green;
+				position:relative;/*定位方式*/
+				left:20px;/*相对原来的位置向右移动20px*/
+				bottom:50px;/*相对原来的位置向上移动50px*/
+			}
+			.a3{background:blue;}
+		</style>
+	</head>
+	<body>
+		<!--div.aa1>div.a$*3-->
+		<div class="aa1">
+			<div class="a1">1</div>
+			<div class="a2">2</div>
+			<div class="a3">3</div>
+		</div>
+	</body>
+</html>
+相对定位:
+position:relative;放在哪个位置就是以这个位置的坐标做为参照点
+1.指定了相对定位后,元素就是一个定位元素,脱离文档流,但没有完全脱离文档流
+2.相对定位脱离了文档流,但原来的位置还得保留
+3.相对定位是相对于原来的位置进行定位
