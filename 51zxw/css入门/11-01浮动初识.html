@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>11-1浮动初识</title>
+		<style type="text/css">
+			ul{
+				width:300px; background:#ccc;
+				margin:100px auto;color:white;
+				font-size:40px;
+			}/*背景位置*/
+			li{
+				width:100px;height:100px;
+				list-style:none;float:left;
+				filter:opaccity(30%);
+			}/*列表图标*/
+			.a1{background:red;}
+			.a2{background:green;}
+			.a3{background:blue;}
+			.a4{background:red;}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li class="a1">1</li>
+			<li class="a2">2</li>
+			<li class="a3">3</li>
+			<li class="a4">3</li>
+		</ul>
+	</body>
+</html>
+浮动:让块级元素能在一行
+float:方向;左left右right
+浮动特点：
+1.浮动元素会脱离正常的文档流,浮动元素就像浮动一样浮起来
+浮动元素后面的正常元素会自动补位浮动元素会补父元素宽度所约束，所以浮动元素并没有完全脱离文档流
+动的特点：
+当浮动元素上的一行是正常元素，这个浮动元素只能待在当前，不能跑到上面
+左浮动:元素会向左跑，会从上一行最右边出来继续跑,直到遇到浮动属性的元素，才会停止
+右浮动:元素会向右跑，会从上一行最右边出来继续跑,直到遇到浮动属性的元素，才会停止
+浮动元素对它下面正常元素中的文字产生影响
+
+
