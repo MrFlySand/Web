@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>11-10定位初识</title>
+		<style type="text/css">
+			.aa1{
+				width:300px;height:300;
+				border:1px solid black;
+				margin:50px;
+				font-size:40px;
+				color:white;
+			}
+			.a1,.a2,.a3{
+				width:100px;height:100px;
+			}
+			.a1{background:red;}
+			.a2{background:green;}
+			.a3{background:blue;}
+		</style>
+	</head>
+	<body>
+		<!--div.aa1>div.a$*3-->
+		<div class="aa1">
+			<div class="a1">1</div>
+			<div class="a2">2</div>
+			<div class="a3">3</div>
+		</div>
+	</body>
+</html>
+
+
+定位:规定元素的位置
+定位用于没有规定的元素而布局
+定位的三种类型:相对定位,绝对定位,固定定位
+定位使用方法:
+1.规定是哪一个定位方式 position:定位方式;
+2.指定在方向上的偏移量:top bottom left right
+3.注意:top和bottom只有一个生效,left和right只有一个生效
