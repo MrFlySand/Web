@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>11-13定位偏移量</title>
+		<style type="text/css">
+			.ab1{
+				width:210px;height:260px;
+				margin:10px auto;/*边框的位置*/
+				border:3px solid blue;/*边框的粗线 颜色*/
+			}
+			.aa1{
+				width:150px;height:300;
+				border:1px solid black;
+				margin:50px auto;
+				position: relative;/*定位方式*/
+				font-size:40px;
+				color:white;
+			}
+			.a1,.a2,.a3{
+				width:100px;height:100px;
+			}
+			.a1{background:red;}
+			.a2{
+				background:green;
+				position:absolute;/*定位方式*/
+				left:50%;top:5px;/*绿色方形离内边框左边相距150/2px,上面相距5px*/
+			}
+			.a3{background:blue;width:120px;}
+		</style>
+	</head>
+	<body>
+		<div class="ab1">
+		<!--div.aa1>div.a$*3-->
+		<div class="aa1">
+			<div class="a1">1</div>
+			<div class="a2">2</div>
+			<div class="a3">3</div>
+		</div>
+		</div>
+	</body>
+</html>
+定位偏移量:
+1.可以使用合法的偏移量
+2.可以使用负值,元素的偏移方向与正值相反
+3.元素相对于哪个元素相对定位,使用%时,就是哪个元素宽度或高度的%
+4.百分比可以使用负数
