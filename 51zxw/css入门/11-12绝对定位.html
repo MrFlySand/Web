@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>11-12绝对定位</title>
+		<style type="text/css">
+			.ab1{
+				width:210px;height:260px;
+				margin:10px auto;/*边框的位置*/
+				border:3px solid blue;/*边框的粗线 颜色*/
+				position:relative;
+			}
+			.aa1{
+				width:150px;height:300;
+				border:1px solid black;
+				margin:50px;
+				font-size:40px;
+				color:white;
+			}
+			.a1,.a2,.a3{
+				width:100px;height:100px;
+			}
+			.a1{background:red;}
+			.a2{
+				background:green;
+				position:absolute;/*定位方式*/
+				left:5px;top:5px;/*绿色方形离外边框左边相距10px,上面相距5px*/
+			}
+			.a3{
+				background:blue;width:120px;
+				position:absolute;/*定位方式*/
+				right: 5px;bottom:5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="ab1">
+		<!--div.aa1>div.a$*3-->
+		<div class="aa1">
+			<div class="a1">1</div>
+			<div class="a2">2</div>
+			<div class="a3">3</div>
+		</div>
+		</div>
+	</body>
+</html>
+
+
+绝对定位position:absolute;
+1.指定了绝对定位后,元素就是一个定位元素,完全脱离文档流
+2.原来的位置不会保留
+3.绝对定位是相对于最近有定位属性的父元素进行定位,如果往上没有找到定位元素的父元素,才会相对于body元素进行定位
