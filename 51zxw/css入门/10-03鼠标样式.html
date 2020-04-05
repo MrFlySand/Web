@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>10-3鼠标样式</title>
+		<style type="text/css">
+			div{
+				width:100px;height:30px;
+				line-height:30px;
+				text-align:center;
+				background-color:yellowgreen;
+			}
+			div:hover{
+				cursor:pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<!--(span{明天会更好$}+br)*5-->
+		<span>明天会更好</span>
+		<br />
+		<span style="cursor:pointer;">明天会更好1</span><!--手形-->
+		<br />
+		<span style="cursor:wait;">明天会更好2</span><!--等待忙碌-->
+		<br />
+		<span style="cursor:help;">明天会更好3</span><!--帮助-->
+		<br />
+		<!--div#page{点击跳转}-->
+		<div id="page">点击跳转</div>
+		<script type="text/javascript">
+			document.getElementById("page").onclick=function(){
+				window.location="http://www.51zxw.net";
+			}
+		</script>
+	</body>
+</html>
