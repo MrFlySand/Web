@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>11-6清除浮动</title>
+		<style type="text/css">
+			ul{
+				width:300px;height:100px;margin:50px auto;background:#ccc;
+				color:white;font-size:30px;list-style:none;
+			}
+			li{width:100px;height:100px;float:left;}
+			.a1{background:red;}
+			.a2{background:green;}
+			.a3{background:blue;clear:left;}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li class="a1">1</li>
+			<li class="a2">2</li>
+			<li class="a3">3</li>
+		</ul>
+	</body>
+</html>
+
+清除浮动：规定元素哪一侧不能有浮动元素
+clear:left;元素左侧不能有浮动元素
+clear:right;元素右侧不能有浮动元素
+clear:both;元素左右侧不能有浮动元素
+注意:清除浮动属性时，要考虑元素的加载顺序
