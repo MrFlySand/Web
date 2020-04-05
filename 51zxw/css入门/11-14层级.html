@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>11-14层级</title>
+		<style type="text/css">
+			.aa1{
+				width:150px;height:500;
+				border:1px solid black;
+				margin:50px auto;
+				position: relative;/*定位方式:相对定位*/
+				font-size:40px;
+				color:white;
+			}
+			.a1,.a2,.a3{width:100px;height:100px;}
+			.a1{
+				background:red;
+				position:absolute;/*定位方式:绝对定位*/
+				left:0;top:0;
+				z-index:3;
+			}
+			.a2{
+				background:green;
+				position:absolute;
+				left:20px;top:20px;
+				z-index:2;
+			}
+			.a3{
+				background:blue;
+				position:absolute;
+				left:40px;top:40px;
+				z-index:4;
+			}
+		</style>
+	</head>
+	<body
+		<div class="aa1">
+			<div class="a1">1</div>
+			<div class="a2">2</div>
+			<div class="a3">3</div>
+		</div>
+	</body>
+</html>
+
+语法:z-index:值;
+层级:
+1.第一个定位元素会独占一层
+2.改变层级来改变定位元素堆叠顺序
+3.数字越大层级越高
+4.当层级一样,后写元素会盖住先写元素,后来居上
