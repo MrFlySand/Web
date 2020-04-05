@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>10-4高斯模糊和饱和度</title>
+		<style type="text/css">
+			.a1{
+				filter:blur(10px) saturate(10%) grayscale(10%) 
+				contrast(20%) opaccity(50%);
+			}
+		</style>
+	</head>
+	<body>
+		<img class="a1" src="../../HB (1)/examples/img/学习更快捷.png"/ 
+			width="300px" >
+	</body>
+</html>
+
+
+滤镜属性：定义图片的可视效果
+语法：filter:属性值;
+高斯模糊：filter:blur(合法的尺寸单位);单位不能是%
+饱和度设置:saturate(百分比);默认值是100%,图像不变.0%图像变黑白,可以超过100%
+灰度：grayscale(百分比)值在0-100之间,默认为0
+对比度:contrast(百分比),默认值100
+透明度:opaccity(百分比),默认值100
