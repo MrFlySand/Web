@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>11-7父元素高度塌陷</title>
+		<style type="text/css">
+			ul{border:1px solid red;width:300px;}			
+			ul li{
+				width:100px;height:100px;
+				list-style:none;
+				float:left;
+				
+			}
+			.a1{background:red;}
+			.a2{background:green;}
+			.a3{background:blue;}
+			.aa1{
+				content:"";
+				display:table;
+				clear:both;
+				}
+		</style>
+	</head>
+	<body>
+		<ul class="aa1">
+			<li class="a1"></li>
+			<li class="a2"></li>
+			<li class="a3"></li>
+		</ul>
+	</body>
+</html>
+
+高度塌陷：由于元素中的子元素设置了浮动元素，会造成父元素高度塌陷
+注意:父元素设置有宽度时,不用清除浮动.父元素没有设置高度时,一定要清除浮动
+防止高度塌陷：
+1.直接给父元素设置高度
+2.在元素内容之后加一个块级元素,设置左右两侧不能有浮动元素,就可以防止父元素高度塌陷
+3.使用伪元素方法在元素内容之后加一个空内容,转成表格元素,设置左右两侧不能有浮动元素.
