@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>11-15移入切换</title>
+		<style type="text/css">
+			.box{
+				width:400px;height:301px;
+				border:2px solid black;/*边框的粗细,实线,颜色*/
+				margin:50px auto;/*四个方向为50px的外边距,内容大于元素框被剪切*/
+				position:relative;/*规定定位方式,以方框做为定位坐标*/
+			}
+			.aa1{
+				text-align:center;color:white;
+			}
+			.aa1 .top{
+				width:100px;height:50px;
+				cursor:pointer;/*鼠标移到该位置变成手形*/
+				float:left;/*向左浮动*/
+				line-height:50px;/*文字位于选择方块的中部*/
+			}
+			.aa1 .bot{
+				width:400px;height:250px;
+				line-height:250px;/*文字位于选择方块的中部*/
+				font-size:100px;
+				position:absolute;
+				left:0;bottom:0px;/*大方块位于方框的左边0px,下边0px*/
+				
+			}
+			.aa1:hover .bot{
+				z-index: 9;/*层级*/
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="aa1">
+				<span class="top" style="background:red;">1</span> 
+				<span class="bot" style="background:red;z-index:1;">1</span>
+			</div>
+			<div class="aa1">
+				<span class="top" style="background:green;">2</span>
+				<span class="bot" style="background:green;">2</span>
+			</div>
+			<div class="aa1">
+				<span class="top" style="background:blue;">3</span>
+				<span class="bot" style="background:blue;">3</span>
+			</div>
+			<div class="aa1">
+				<span class="top" style="background:orange;">4</span>
+				<span class="bot" style="background:orange;">4</span>
+			</div>
+		</div>	
+	</body>
+</html>
