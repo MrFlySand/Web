@@ -1,0 +1,357 @@
+/*公共样式*/
+.content-box{
+	width:1200px;margin:0 auto;position:relative;
+}
+.m-list a{
+	display:block;float:left;border-radius:10px;
+	box-shadow:0 0 10px #ccc;background:rgba(181,181,181,0.5);
+	margin:25px;overflow:hidden;/*溢出会被切剪*/
+}
+.m-list a img{
+	-webkit-filter:opacity(90%);
+	filter:opacity(90%);
+}
+.m-list a:hover img{
+	-webkit-filter:opacity(100%);
+	filter:opacity(100%);
+}
+.m-list a:hover p{
+	color: blue;
+}
+.m-title{
+	width:100%;height:80px;line-height:80px;
+	text-align: center;font-size:30px;
+	background:url(../images/图标1.png) no-repeat center;
+}
+.zx-box p{
+	position:relative;left:5px;
+}
+.content-box .gdkc{
+	font-size:30px;text-align:center;line-height:200px;
+	background:url(../../HB/images/muwu.jpg);
+	color:blue;font-weight: 900;
+	filter:blur(10px) saturate(10%) grayscale(10%) 
+	contrast(20%) opaccity(50%);
+}
+.m-list p{
+	position:relative;
+	left:5px;
+}
+/*公共样式*/
+/*logo,搜索,用户信息开始*/
+.h-top{
+	height:88px;position:relative;	
+}
+.logoimg{height:78px;position:absolute;left:20px;top:5px;}
+.h-top .logo{width:214px;height:58px;display:block;
+	position:absolute;left:0;top:15px;bottom:15px;
+}
+.h-top .search{
+	width:330px/*搜索栏的宽高*/;height:36px;border:2px solid #ccc;/*边框1px 颜色*/
+	border-radius:18px/*圆角像素*/;background:#fff;position:absolute;left:50%;
+	margin-left:-165px;top:26px;overflow:hidden/*溢出隐藏*/;
+}
+.h-top .search .input-1{
+	width:240px;height:100%;border:none;padding:0 20px/*文字距左边20*/;	
+}
+.h-top .search .input-r{
+	width:50px;height:100%;border:none/*无边框*/;
+	background:greenyellow;border-radius:18px;right:0px;
+}
+.h-top .user{	
+	width:180px;height:28px;line-height: 28px/*行高*/;
+	position:absolute/*定位*/;right:-40px;top:30px;
+}
+.h-top .user a{
+	width:80px;text-align:center;font-size:16px;
+	color:#000;
+}
+/*logo,搜索,用户信息结束*/
+/*导航开始*/
+nav{
+	background:#363636;position:relative;
+}
+nav .nav-box{
+	height:44px;line-height:44px;text-align: center;
+}
+.nav-box a{display:block;width:80px;height:44px;
+	float: left;color: #fff;font-size: 16px;
+}
+.nav-box .nav-l{width:800px;}
+.nav-box .nav-r{width:240px;position:relative;}
+.nav-box .nav-l a:hover{font-size:18px;color:#00aeff;}
+.nav-box .nav-r a:hover{background:#ca3333;}
+/*.nav-box .nav-r p{
+	width:80px;height:6px;background:#ca3333;top:-6px;
+	position:absolute;transform:rotateY(90deg);
+}
+.nav-box .nav-r div:hover p{
+	transform:rotateY(0deg);transition:transform 500ms;
+}*/
+/*.nav-box .nav-r p{
+	width:10px;height:6px;top:-6px;margin-left:35px;
+	position:absolute;
+}
+.nav-box .nav-r div:hover p{
+	transform:scaleX(8);transition:transform 500ms;
+	background:#ca3333;
+}*/
+.nav-box .nav-r p{
+	width:10px;height:6px;top:-6px;
+	position:absolute;
+}
+.nav-box .nav-r div:hover p{
+	width: 80px;transition: 500ms;
+	background:#ca3333;
+}
+/*导航结束*/
+/*幻灯片开始*/
+.slideshow{
+	background:red;width:100%;height:333px;
+}
+.sl-img .top{
+	width:10px;height:10px;
+	background-color:#ffffff;
+	border:1px green solid;border-radius:50% 50%;
+	cursor:pointer;/*鼠标移到该位置变成手形*/
+	position:absolute;
+}
+.sl-img .bot{
+	height:100%;	
+	left:350px;bottom:0px;/*大方块位于方框的左边0px,下边0px*/
+	position:absolute;	
+}
+.sl-img:hover .bot{
+	z-index: 9;/*层级*/
+}
+/*公告开始*/
+.announcement{
+	width:250px;height:310px;
+	color:white;
+	background: rgba(0,0,0,0.7);
+	border-radius:5px;
+	position:absolute;
+	right:20px;top:11px;
+}
+.announcement ul{padding-left:25px;}/*文字距黑色背景的左边相距25px*/
+.announcement ul li{
+	list-style:disc;/*列标前是小圆点*/
+}
+/*公告结束*/
+/*幻灯片结束*/
+/*远程培训班开始*/
+.ycpxb{
+	height:160px;
+	background:	#D3D3D3;
+}
+.ycpxb a{
+	width:220px;height:130px;float:left;
+	display:block;margin: 15px 10px;/*外边距*/
+	color:#fff;font-size:20px;font-weight:700;
+	text-align: center;/*水平居中*/line-height:114px;/*行高*/
+	background:no-repeat 0 0/100% 100%;overflow:hidden;
+	border-radius:12px;/*圆角*/
+}
+.ycpxb a:hover{
+	background-size:110% 110%;/*背景大小*/
+	color:#fff;
+}
+.ycpxb .ycpxbimg1{background:url(../../HB/images/cbd.jpg);background-size:100% 100%;}
+.ycpxb .ycpxbimg2{background:url(../../HB/images/muwu.jpg);background-size:100% 100%;}
+.ycpxb .ycpxbimg3{background:url(../../HB/images/yuantiao.jpg);background-size:100% 100%;}
+.ycpxb .ycpxbimg4{background:url(../../HB/images/muwu.jpg);background-size:100% 100%;}
+.ycpxb .ycpxbimg5{background:url(../../HB/images/yuantiao.jpg);background-size:100% 100%;}
+.ycpxb a span{
+	display:block;width:100%;height:100%;background:rgba(0,0,0,0.5);
+	text-shadow:4px 2px 5px #000;/*文字阴影*/
+}
+/*远程培训班结束*/
+/*最新课程开始*/
+.zx-m-list a{
+	display:block;float:left;border-radius:10px;
+	box-shadow:0 0 10px #ccc;background:rgba(181,181,181,0.5);
+	margin:25px;overflow:hidden;/*溢出会被切剪*/
+}
+.zx-box a{width:250px;height: 200px;}
+.rm-box a{width:190px;height: 200px;}
+.clearfix img{
+	width: 100%;height:90%;
+}
+/*最新课程结束*/
+/*热门推荐开始*/
+.kc-nav a{
+	display:block;/*块级元素显示*/width:120px;height:30px;
+	line-height:30px;text-align: center;float:left;
+	color:black;margin:0 3px;
+}
+.kc-nav a:hover{
+	background:linear-gradient(45deg,#0078ff,#8138db);
+	color:#fff;
+	border-radius:3px;
+}
+/*热门推荐结束*/
+/*课程分类开始*/
+.kcfl .kc-nav{
+	padding: 0 100px 0 15px;position:relative;
+	word-break:keep-all;/*文字不会分开*/
+}
+.kcfl .kc-nav .n-b{
+	display:block;width:60px;height:20px;
+	line-height:20px;background:#00AEFF;
+	border-radius:4px;text-align:center;
+	color:#fff;position:absolute;right:15px;bottom:8px;
+}
+/*课程分类结束*/
+/*名师简介开始*/
+.ms-m-list a{
+	display:block;float:left;border-radius:10px;
+	box-shadow:0 0 10px #ccc;background:rgba(181,181,181,0.5);
+	margin:25px;overflow:hidden;/*溢出会被切剪*/
+}
+.msjj-box a{
+	width:250px;height:300px;
+	float:left;
+}
+.msjj-box img{
+	width:200px;height:200px;
+	border-radius:100%;
+	position:relative;
+	left: 25px;top: 20px;
+}
+.msjj-box p{
+	text-align: center;color:#363636;
+	position:relative;
+	top:25px;
+}
+.msjj-box .ms-name{
+	color:#000;
+	font-size:16px;
+}
+.msjj-box a:hover{
+	color:#000;
+}
+/*名师简介结束*/
+/*尾部开始*/
+footer{
+	padding:20px 0;
+	line-height:30px;
+
+}
+footer .fo-p1 b{
+	display:inline-block;width:80px;
+	text-align: center;margin:0 20px;
+}
+footer .fo-p1 span{
+	margin:10px 10px;
+}
+footer .fo-p2 b{
+	display:inline-block;width:80px;
+	text-align: center;margin:0 20px;
+}
+footer .fo-p2 a{
+	margin:10px 10px;
+}
+footer .fo-p2 img{
+	height:30px;
+}
+footer .fo-p3{
+	padding-left:130px;padding-right: 100px;
+	word-break:keep-all;/*防止文字分开*/
+}
+footer .fo-p3 a{
+	margin:0 10px;
+}
+footer .fo-p4{
+	text-align: center;font-size: 12px;
+}
+footer .fo-p4 a{
+	display: inline-block;width: 70px;
+	height:20px;line-height:20px;
+	color:#fff;background:#0062CC;border-radius:4px;overflow:hidden;
+}
+footer .fo-p5{
+	text-align: center;font-size: 12px;
+}
+footer .fo-p5 img{
+	vertical-align: middle;
+	height:20px;
+	line-height:30px;
+}
+footer .fo-p6{
+	text-align: center;
+	
+}
+footer .fo-p6 img{
+	height:50px;line-height:50px;
+}
+/*尾部结束*/
+/*快速跳转开始*/
+.kstz{
+	width:66px;text-align:center;
+	position:fixed;top:30%;left:50%;
+	margin-left:-686px ;
+}
+.kstz h4{
+	color:deepskyblue;margin-bottom:10px ;
+}
+.kstz a{
+	display: block;width:66px;height:66px;
+	border-radius:50%;box-shadow:3px 3px 7px #ccc;
+	margin-bottom:16px;padding-top:12px;
+	color:black;font-size:24px;line-height:50px;
+	border:2px solid black;
+}
+/*快速跳转结束*/
+/*右侧区块开始*/
+.ycqk{
+	width:66px;text-align:center;
+	position:fixed;top:40%;left:50%;
+	margin-left:620px ;
+}
+.ycqk a{
+	display:block;width:50px;height:50px;
+	border-radius:4px;box-shadow: 0 0 8px #ccc;
+	text-align:center;margin-bottom:10px;		
+}
+.ycqk a span{
+	display: none;
+}
+.ycqk .wx{
+	background:url(../images/wxIcon.png) no-repeat center;
+	position: relative;
+}
+.ycqk .qq{
+	background:url(../images/qqIcon.png) no-repeat center;
+}
+.ycqk .xz{
+	background:url(../images/mobileIcon.png) no-repeat center;
+}
+.ycqk .top{
+	background:url(../images/upArrowIcon.png) no-repeat center;
+}
+.ycqk .wx img{
+	display:none;position:absolute;
+	top:0;left:-200px;
+}
+.ycqk a:hover{
+	background:none;
+}
+.ycqk .wx:hover span{
+	display: block;
+}
+.ycqk .qq:hover span{
+	display: block;
+}
+.ycqk .xz:hover span{
+	display: block;
+}
+.ycqk .top:hover span{
+	display: block;
+}
+.ycqk a:hover{
+	background:none;
+}
+.ycqk .wx:hover img{
+	background:block;
+}
+/*右侧区块结束*/
