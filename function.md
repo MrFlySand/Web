@@ -1,5 +1,18 @@
 # 常用的函数
-#### 判断小数点的位置
+### 输出换行
+* 可以指定多少个元素换行
+```js
+function print(arr,leng,row){//数组,长度,行数
+	for (var i=0;i<leng;i++) {
+		var label =i+1;
+		if(i%row!=row-1||i==0)
+			document.write(label+"、"+arr[i]+"&nbsp&nbsp&nbsp");
+		else
+			document.write(label+"、"+arr[i]+"<br>");	
+	}           		
+}
+```
+### 判断小数点的位置
 ```js
 function decimalPoint(num){
    var x = String(num).indexOf('.')+1;   //小数点的位置
