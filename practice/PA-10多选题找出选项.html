@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>多选题找出选项</title>
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			#numba{
+				width:100px;height:100px;color:red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">	
+			<button type="button" style="width:100px; height:50px; font-size:24px;" onclick="Submit()">提交</button>
+			<input id="num" style="height:45px; width:180px; font-size:24px;" placeholder="题数/多少个一行"><br />
+			<textarea id="word" style="width:290px;height:70px;margin-top:10px;overflow-y:hidden;" placeholder="内容"></textarea>
+		</div><br>
+		<script type="text/javascript">
+			//输出
+			function print(i,row,label,number1,number2,number3,number4){//下标值,行数,标号,值
+           		if((label-1)%row!=row-1||i==0)
+					document.write(label+"、"+number1+number2+number3+number4+"&nbsp&nbsp&nbsp");
+				else
+					document.write(label+"、"+number1+number2+number3+number4+"<br>");
+			}
+			function Submit(){
+				var num = document.getElementById("num").value;
+				var row = num.substring(num.indexOf("/")+1);
+				num =  num.substring(0,num.indexOf("/"));				
+				var word = document.getElementById("word").value;
+				var numbers =0 ;
+				for (var i=0;numbers<num;i++){
+					if(word[i] == "(" && word[i+2] == ")"){
+						numbers++;
+						print(i,row,numbers,word[i+1],"&nbsp&nbsp","&nbsp&nbsp","&nbsp&nbsp");					
+					}
+					if(word[i] == "(" && word[i+3] == ")"){
+						numbers++;
+						print(i,row,numbers,word[i+1],word[i+2],"&nbsp&nbsp","&nbsp&nbsp");					
+					}
+					if(word[i] == "(" && word[i+4] == ")"){
+						numbers++;
+						print(i,row,numbers,word[i+1],word[i+2],word[i+3],"&nbsp&nbsp");					
+					}
+					if(word[i] == "(" && word[i+5] == ")"){
+						numbers++;
+						print(i,row,numbers,word[i+1],word[i+2],word[i+3],word[i+4]);					
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
