@@ -1,4 +1,14 @@
 # 常用的函数
+### 一个个打印文字
+```js
+function onePrint(){
+	var index=0;
+	var word="要输出的文字";
+	function type(){		
+		document.getElementById("").innerHTML = word.substring(0,index++);
+	}setInterval(type, 180);
+}
+```
 ### 输出换行
 * 可以指定多少个元素换行
 ```js
