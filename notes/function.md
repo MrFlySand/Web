@@ -14,17 +14,18 @@ function onePrint(){
 <div id="SuspendedBall" style="top: 100px;left: 0;">更多</div>
 ```
 ```css
-#SuspendedBall{
-    width: 50px;
-    height: 50px;
+ #SuspendedBall{
+    width: 25px;
+    height: 25px;
     position:fixed;
-    background-color: #ccc;
+    background-color: rgba(0,0,0,0.5);
     border-radius:25px;
     text-align: center;
-    font-size: 20px;
-    color: #000;
-    line-height: 50px;       
-}       	
+    font-size: 10px;
+    color: #fff;
+    line-height: 25px;      		    
+    border-style: solid;
+}        	
 /*电脑是否显示*/
 /*@media screen and (max-width: 800px) {
 	    .SuspendedBall{
