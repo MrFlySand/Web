@@ -1,12 +1,11 @@
 # 常用的函数
 ### 一个个打印文字
 ```js
-function onePrint(){
+function onePrint(word){
 	var index=0;
-	var word="要输出的文字";
 	function type(){		
 		document.getElementById("").innerHTML = word.substring(0,index++);
-	}setInterval(type, 180);
+	}setInterval(type, 160);
 }
 ```
 ### 悬浮球
