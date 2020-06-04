@@ -10,21 +10,23 @@ function onePrint(word){
 ```
 ### 悬浮球
 ```html
-<div id="SuspendedBall" style="top: 100px;left: 0;">更多</div>
+<div id="SuspendedBall">更多</div>
 ```
 ```css
- #SuspendedBall{
+  #SuspendedBall{
     width: 25px;
     height: 25px;
     position:fixed;
-    background-color: rgba(0,0,0,0.5);
+    top: 70%;right: 10px;
+    background-color: rgba(255,0,0,0.3);
     border-radius:25px;
+    font-weight:800 ;
     text-align: center;
     font-size: 10px;
-    color: #fff;
+    color: #000;
     line-height: 25px;      		    
     border-style: solid;
-}        	
+}    
 /*电脑是否显示*/
 /*@media screen and (max-width: 800px) {
 	    .SuspendedBall{
