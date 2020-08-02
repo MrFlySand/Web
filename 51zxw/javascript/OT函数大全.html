@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		//获取旋转角度函数开始
+			//r是度数
+			function trans(r){
+				var values =r.split('(')[1].split(')')[0].split(',');
+				var a =values[0];
+				var b =values[1];
+				var scale =Math.sqrt(a*a+b*b); 
+				var sin = b/scale;
+				var rota =Math.round(Math.atan2(b,a)*(180/Math.PI));
+				var rotate =rota>=0?rota:rota+360;
+				return rotate;
+			}
+//获取旋转角度函数结束
+		</script>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>4-12while循环</title>
+		<script type="text/javascript">
+			var a=1;
+//			随机生成50以内的数
+			var b=Math.floor(Math.random()*(50-1+1));
+			alert(b);
+			//while(a<b){
+			//document.write("密码:"+a+"不正确<br>");
+			//	a++;
+			//}
+			//a++;
+
+			//do{
+			//	document.write("密码:"+a+"不正确<br>");
+			//	a++;
+			//}while(a<b)		
+			//document.write("密码:"+a+"正确<br>");
+//			break终止全部循环,continue终止本次循环
+			while(a<1000){
+				if(a==b){
+					document.write("密码:"+a+"正确<br>");
+					break;
+				}
+				if(a==11||a==22||a==33||a==44)
+					continue;
+				document.write("密码:"+a+"不正确<br>");
+				a++;
+			}
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

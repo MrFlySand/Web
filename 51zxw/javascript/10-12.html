@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>10-12数组元素过滤</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//filter():把数组中的某些元素过滤掉,然后返回剩下的元素,接收的是一个回调函数
+	//数组中的每一项运行给定函数,返回满足过渡条件组成的新数组
+	//不会改变原数组
+			var arr1 = [1,2,3,4,5,6,7,8,9,10];
+			function abc(x){
+				return x>6;
+			}
+			function even(x){
+				return x%2==0;
+			}
+			function odd(x){
+				return x%2==1;
+			}
+			var arr = arr1.filter(abc);//7,8,9,10
+			var even = arr1.filter(even);
+			var odd = arr1.filter(odd);
+			document.write(arr+"<br>");
+			document.write(even+"<br>");//2,4,6,8,10
+			document.write(odd+"<br>");//1,3,5,7,9
+		</script>
+	</body>
+</html>

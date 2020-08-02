@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>11-3筛选对象键值</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var obj = {name:"小明",age:18,sex:"男",height:"1.8米"};//这是一个对象
+//1. JS对象转JSON字符串:使用JSON.stringify()方法
+	//A. 参数1:要转换对象和数组
+	//B. 参数2:数组或函数(可选)
+		//a. 如果参数2是一个数组,则转换数组中指定的属性
+		//b. 如果参数2是函数,则将调用函数,并传入每个成员的键和值
+		//c. 参数3(可选):文本缩进、空格和换行符
+			var xm_json = JSON.stringify(obj,sex);
+			function sex(key,value){
+				if(value == "男"){
+				 	return "女";
+				}
+				return value;
+			}
+			var xm_json =JSON.stringify(obj,null,5);//5:前面加5个空格
+			console.log(xm_json);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>9-20下拉列表</title>
+	</head>
+	<body>
+		<form action="http://127.0.0.1/9-20.php" 
+			method="post">到过的省市:<br />
+			<select name="abc[]" size="3" multiple>
+				<optgroup label="北上广深">
+					<option value="北京">北京</option>
+					<option value="上海">上海</option>
+					<option value="广州">北京</option>
+					<option value="深圳">上海</option>
+				</optgroup>
+				<option value="北海">北海</option>
+				<option value="武汉">武汉</option>
+			</select>
+			<input type="submit" value="确定"/>
+		</form>
+	</body>
+</html>
+
+

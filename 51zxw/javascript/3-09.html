@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>3-9逻辑运算符</title>
+		<script type="text/javascript">
+//"与"运算,所有条件全部满足才能成立
+			var a = 5>3&&4<7;//true
+			var a = 5>3&&4>7;//flase
+			var a = 5>3&&4>7&&8<10;//false 
+//"或"运算,只要有一个条件满足就能成立
+			var a = 5>3||4>7;//true
+			var a = 5>3||4<7;//true
+//"非"运算,取反,真变假,假变真
+			var a = !5<3;//true
+			var a = !5>3||4<7;//true			
+			var a =!5>3&&4<8;//false
+			var a =!5<3&&4<8;//true			
+			var a =!5<3||4<8;//true
+			var a =!5<3||4>8;//true
+			document.write(a);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

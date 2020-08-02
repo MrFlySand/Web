@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>10-2伪数组转数组</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//Array.from()将伪数组变成数组,只要有length属性的就可以转成数组 .ES6语法		
+	//把字符串,set数据类型转成数组
+			var web = "www.flysand.com";
+			var arr = [1,2,3,4,5];
+			var obj = {name:"小明",age:18};
+			document.write(web.length+"<br>");
+			document.write(arr.length+"<br>");
+			document.write(obj.length+"<br>");
+			var a =Array.from(web);
+			var b =Array.from(arr);
+			var c =Array.from(obj);//对象没有长度
+			document.write(a+"<br>"+b+"<br>");
+			console.log(c);
+		</script>
+	</body>
+</html>

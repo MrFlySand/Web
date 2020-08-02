@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>8-18定时器三种写法</title>
+		
+	</head>
+	<body>
+		<script type="text/javascript">
+//1.setTimeout(要执行的动作,时间:毫秒);多少时间执行,只执行一次
+			//setTimeout(function(){
+			//	document.write("明天会更好");
+			//},3000);
+//2.setInterval(要执行的动作,时间:毫秒);多少时间就执行,重复执行多次
+			//setInterval(function(){
+			//	document.write("明天会更好");
+			//},3000);
+//要执行动作的三种写法:(定时器的第一个参数)
+	//1.匿名函数:
+			//setInterval(function(){
+			//	document.write("明天会更好");
+			//},3000);
+	//2.函数名,不能有参数
+			//function aa(){
+			//	document.write("明天会更好");
+			//}
+			//setInterval(aa,1000);
+	//3.把函数当成字符串,就可以当成参数
+			function bb(x){
+				document.write(x);
+			}
+			var x="1<br>";
+			setInterval("bb(x)",1000);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>6-05数组遍历</title>
+		<script type="text/javascript">
+			var console1 = ["张琦","李四","小王"];
+//第一种for循环
+			//for (var alert1=0;alert1<console1.length;alert1++) {
+			//	document.write(console1[alert1]+"写作业去<br>");
+			//}
+//第二种for循环
+			//doucument1 =console1.length;
+			//for (var alert1=0;alert1<doucument1;alert1++) {
+			//	document.write(console1[alert1]+"写作业去<br>");
+			//}
+//第三种for循环,for-in使用下标.效率最低
+			//for (alert1 in console1){
+			//	document.write(console1[alert1]+"写作业去<br>");
+			//}
+//第四种for循环,for-of,使用数据.比for-in效率高,比普通效率低
+			for (x of console1){
+				document.write(x+"写作业去<br>");
+			}
+//第五种for循环
+			for (value in console1){
+				document.write(value+"写作业去<br>");
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

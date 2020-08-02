@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>10-16对象的合并</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//Object.assign()方法用于对象的合并,源对象的属性,复制到目标对象中
+	//第一个参数是目标对象,后面的参数都是源对象
+	//会修改目标对象,不会修改源对象
+			var obj1 = {a:1};
+			var obj2 = {b:2};
+			var obj3 = Object.assign(obj1,obj2);
+			var obja = Array.from(obj1);
+			var objb = Array.from(obj2);
+			var objc = Array.from(obj3);
+			console.log(obj1);//{a: 1,b: 2}
+			console.log(obj2);//{b: 2}
+			console.log(obj3);//{a: 1,b: 2}
+			document.write(obja+"<br>");
+			document.write(objb+"<br>");
+			document.write(objc+"<br>");
+	//如果目标对象与源对象有同名属性,或多个源对象有同名属性m则后面的属性会覆盖前面的属性		
+			var obj4 = {a:1,b:1};
+			var obj5 = {b:2,c:2};
+			var obj6 = Object.assign(obj4,obj5);
+			var objd = Array.from(obj4);
+			var obje = Array.from(obj5);
+			var objf = Array.from(obj6);
+			console.log(obj4);//{a: 1,b: 1,c: 2}
+			console.log(obj5);//{b: 2,c:2}
+			console.log(obj6);//{a: 1,b: 2,c: 2}
+			document.write(objd+"<br>");
+			document.write(obje+"<br>");
+			document.write(objf+"<br>");
+	//多个对象合并
+			var obj7 = {a:1,b:1};
+			var obj8 = {b:2,c:2};
+			var obj9 = {b:3,d:3};
+			var obj10 = Object.assign(obj7,obj8,obj9);
+			var objg = Array.from(obj7);
+			var objh = Array.from(obj8);
+			var obji = Array.from(obj9);
+			var objj = Array.from(obj10);
+			console.log(obj7);//{a: 1, b: 3, c: 2, d: 3}
+			console.log(obj8);//{b: 2,c:2}
+			console.log(obj9);//{a: 3,b: 3}
+			console.log(obj10);//{a: 1, b: 3, c: 2, d: 3}
+			document.write(objg+"<br>");
+			document.write(objh+"<br>");
+			document.write(obji+"<br>");
+			document.write(objj+"<br>");
+		</script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>7-11组合方式获取元素</title>
+	</head>
+	<body>
+		<div id="aa1" class="aa" name="aaa">
+			<p id="a2" class="aa">明天会更好2</p>
+			<div id="a3" class="aa2" name="xyz">明天会更好3</div>
+			<p id="a4" class="aa" name="xyz">明天会更好4</p>
+			<div id="a5" class="aa2">明天会更好5</div>
+		</div>
+		
+		<script type="text/javascript">
+//正确方法,ID内有标签选择器,ID内有class类选择器
+			//var aa1=document.getElementById("aa1").getElementsByTagName("p");
+			//var bb1=document.getElementById("aa1").getElementsByClassName("aa2");
+//错误方法,ID内有name,ID内有ID,name内有ID,name内有html标签选择器
+			//var aa1=document.getElementById("aa1").getElementsByClassName("xyz");
+			//var bb1=document.getElementById("aa1").getElementsByID("a2");
+			var aa1=document.getElementsByClassName("aaa").getElementById("a2");
+			var bb2=document.getElementsByClassName("aaa").getElementsByTagName("p");
+			for (var i=0;i<aa1.length;i++){
+				aa1[i].style.color="red";
+				bb1[i].style.color="blue";
+			}
+		</script>
+	</body>
+</html>

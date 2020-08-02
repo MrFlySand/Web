@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>7-18this的应用2
+		</title>
+		<style type="text/css">
+			.aa{
+				width:200px;height:200px;background:red;
+				float:left;font-size:20px;margin-left:10px;
+			}
+		</style>
+		<script type="text/javascript">
+	//方法2
+			//function abc(){//随机数
+			//	this.innerText=Math.random();
+			//	this.style.background="blue";
+			//	this.style.height="300px";
+			//	this.style.color="red";
+			//} 
+	//方法1,方法3 html加onclick="abc(this)
+			function abc(a){//随机数
+				a.innerText=Math.random();
+				a.style.background="blue";
+				a.style.height="300px";
+				a.style.color="red";
+			} 
+//在事件中this指向了:正在操作的元素
+
+			window.onload=function(){
+				var aa=document.getElementsByClassName("aa");
+	//方法1
+				//for(var i=0;i<aa.length;i++){
+				//	aa[i].onclick=function(){
+				//		abc(this);		
+				//	}
+				//}	
+	//方法2:使用事件监听会自动传入正在操作的元素对象,abc就是this
+				//for (var i=0;i<aa.length;i++) {
+				//	aa[i].addEventListener("click",abc);
+				//}
+			}
+		</script>
+	</head>
+	<body>
+	<!--方法3-->
+		<div class="aa" onclick="abc(this)"></div>
+		<div class="aa" onclick="abc(this)"></div>
+		<div class="aa" onclick="abc(this)"></div>
+		<div class="aa" onclick="abc(this)"></div>
+	</body>
+</html>

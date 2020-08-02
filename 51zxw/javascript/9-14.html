@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>9-14字符串分割</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var ch = "www.flysand.com";
+//1. 分割字符split();把一个字符串分割成字符串数组  
+	//语法:split(指定位置分割,指定数组长度)
+			var a = ch.split(".");//["www","flysand","com"]
+			var b = ch.split(".",1);//["www"]
+			var c = ch.split(".",2);//["flysand"]
+			document.write(c[1]);
+			var d = "中文名:我和我的祖国||出口时间:2019年||主演:吴京";
+			var e = d.split("||");
+			document.write(e[1]);
+		</script>
+	</body>
+</html>

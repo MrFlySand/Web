@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>5-15递归0加到100</title>
+		<script type="text/javascript">
+			var sum=0,i=0;
+			al(i);
+			function al(i){
+				if(i<=100){	
+					sum=sum+i
+					i++;
+					al(i);	
+				}
+			}
+			document.write(sum);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

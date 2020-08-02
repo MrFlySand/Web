@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>1-11js发生错误时的阻塞</title>
+		<script type="text/javascript">
+			//alert("明天会更好");
+			window.onload=function(){//当页面执行完页面以后执行里面的代码
+			var abc = document.getElementById("a1");//获取ID为a1的对象
+			abc.style.color="red";
+			abc.style.fontSize="50px";
+			abc.style.fontWeight="500";
+			abc.style.textAlign="center";//文字居中
+			}
+		</script>
+	</head>
+	<body>
+		<div id="a1">明天会更好1</div>
+		<!--<script type="text/javascript">
+			var abc = document.getElementById("a1");
+			abc.style.color="red";
+		</script>-->
+	</body>
+</html>
+js发生错误时的阻塞:
+1.根据js执行顺序:按语句出现的先后顺序执行,上一段代码执行完毕,才能执行下一段代码
+2.如果一段代码出现错误,那么代码之后的代码不会执行
+3.根据浏览器控制台错误提示进行调试
+4.二分查找错误,利用js的阻塞性

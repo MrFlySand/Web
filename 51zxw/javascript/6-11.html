@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>6-11二维数组的最小值和最大值</title>
+		<script type="text/javascript">
+			var array1 =[[23,9,56],[65,64,6],[53,86,86]];
+			var jhs;//交换数
+			for (var i=0;i<array1.length;i++) {
+				for (var j=0;j<array1[i].length;j++) {
+					if(array1[i][j]<array1[i][j+1]){
+						jhs=array1[i][j+1];
+					}
+				}
+			}
+			document.write("最大值是:"+jhs);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>9-05时间戳</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//时间戳:从格林威治时间1970年1月1日00时00分00秒(北京时间:1970.1.1.8.00.00)起至现在的总毫秒数,13位数字
+	//获取从1970年到目前为止的总毫秒数
+		//精确到毫秒
+			var t =new Date().getTime();
+		//精确到分
+		//parseInt()将字符串转为整型
+			//var t =parseInt(new Date().getTime()/1000);
+			//注册时间的时间戳
+			var o_t = parseInt(new Date("2020/2/23 19:30").getTime()/1000);
+			//目前的时间戳
+			var n_t = parseInt(new Date().getTime()/1000);
+			var d_t =o_t+86400*360;//到期的时间(s)
+			var valu = d_t-n_t;//过期的时间(s)
+			var day = Math.floor(valu/86400);
+			var h = Math.floor(valu/3600);
+			document.write(valu+","+day+","+h);
+			if(valu>0){
+				if(day>=1){
+					alert("会员未到期,还有"+day+"天过期");
+				}else{
+					alert("会员未到期,还有"+h+"h过期");
+				}
+			}else{
+				alert("会员到期了");
+			}
+		</script>
+	</body>
+</html>

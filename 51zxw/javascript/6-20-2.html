@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>6-20-2构造函数创建数组</title>
+		<script type="text/javascript">
+			 function ren(){
+				this.classroom = [];
+				this.school =[];
+			}
+			var arr =new ren();
+			arr.classroom[0] = 12;
+			arr.classroom[1] = 20;
+			arr.classroom[2] = 30;
+			arr.school[0] = 111;
+			arr.school[1] = 134;
+			arr.school[2] = 178;
+			console.log(arr);
+			document.write(arr.classroom[2]+"/"+arr.school[0]);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

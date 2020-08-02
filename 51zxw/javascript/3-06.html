@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>3-6关系运算符</title>
+		<script type="text/javascript">
+			var a;
+//>,<,>=,<=,==,!=只比较值,不比较类型
+			a=4>3;//true
+			a="4">3;//true
+			a=4<3;//false
+			a=4>=3;//true
+			a="4">=3;//true
+			a=4<=3;//false
+			a=4!=3;//true
+			a="4"!=3;//true
+			a=4==3;//false
+//===比较的是数值和类型
+			a= 3===3;//true
+			a= "3"===3;//false
+			a= "3"==="3";//true
+			a= 3!==3//false
+			a= 3!==4//true
+			a="4"!==4;//true
+			a= "4"!=="4"//flase
+			document.write(a);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

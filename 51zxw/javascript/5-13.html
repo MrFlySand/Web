@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>5-13回调函数练习2</title>
+		<script type="text/javascript">
+			要求计算(2+3)*4
+			1.函数A执行函数B,函数B是回调函数
+			function a(x,y,z,b){
+				return b(x+y,z);
+			}
+			function b(x,y){
+				return x*y;
+			}
+			alert(a(2,3,4,b));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

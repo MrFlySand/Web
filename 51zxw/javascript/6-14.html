@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>6-14对象创建方法</title>
+		<script type="text/javascript">
+			var ren ={name:"小明",sex:"男",age:12,height:1.8};
+ //访问对象属性:
+ 	//1.对象名["属性名"]
+ 			var a =ren["name"];
+ 	//2.对象名,属性名
+ 			var b =ren.sex;
+ 	//3.对象添加属性
+ 			ren.love ="sing";
+ 			ren["clothes"] ="red";
+ 			document.write(a+","+b);
+			console.log(ren);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+<!--1.js对象是包含很多属性的变量
+2.js对象属性指的是与对象相关的值。js对象是无序属性的集合
+3.属性按照 名称:值 对的形式编写(名称和值以冒号分隔)
+4.var 人 ={姓名:小明,年龄:18岁,性别:男,身高:1.8米}-->
+

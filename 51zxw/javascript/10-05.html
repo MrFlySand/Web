@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>10-5数组任意位置删除、插入、替换、截取</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//splice()可以实现删除,插入,替换,截取,会直接修改原数组
+	//1. 删除
+			var arr = ["赵","钱","孙","李"];
+			arr.splice(1,2);//从下标1开始向后去掉2个
+			document.write(arr+"<br>");//赵，李
+	//2. 插入:可以向 指定位置插入任意数量的项,需要提供至少3个参数,起始位置、0(要删除的项数)和要插入的字符
+			var arr = ["赵","钱","孙","李"];
+			arr.splice(2,0,"周","吴");
+			arr.splice(arr.length,0,"黄")//在最后加字符
+			document.write(arr+"<br>");//赵,钱,周,吴,孙,李,黄
+	//3. 替换:
+			var arr = ["赵","钱","孙","李"];
+			arr.splice(2,1,"周");//赵,钱,周,李
+			arr.splice(1,2,"王","郑");//赵,王,郑,李
+			document.write(arr+"<br>");
+	//4. 截取
+			var arr = ["赵","钱","孙","李"];
+			var a = arr.splice(1,2);
+			document.write(a);
+		</script>
+	</body>
+</html>

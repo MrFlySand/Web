@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>10-11数组元素自定义排列</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//1. 数组变量.sort(比较函数)用于对数组的元素进行排序
+	//A. 比较函数应该具有两个参数a和b,其返回值如下
+		//a. 若a小于b,在排序后的数组中a应该出现在b之前,则返回一个小于0的值
+		//b. 若a等于b,则返回0
+		//c. 若a大于b,则返回一个大于0的值
+	//B. 升序排列
+			function asc(a,b){
+				if(a<b){
+					return -1;
+				}else if(a>b){
+					return 1;
+				}else{
+					return 0;
+				}
+			}
+	//C. 降序排列
+			function desc(a,b){
+				if(a<b){
+					return 1;
+				}else if(a>b){
+					return -1;
+				}else{
+					return 0;
+				}
+			}
+	//升序
+			var arr1 = [3,9,7,6,4,2];
+			var arr2 = ["e","d","f","d","g"];
+			var arr3 = [34,35,7,65,4,23];
+			var arr4 = ["de","da","y","ad","z"];
+			arr1.sort(asc);//2,3,4,6,7,9
+			arr2.sort(asc);//d,d,e,f,g
+			arr3.sort(asc);//4,7,23,34,35,65
+			arr4.sort(asc);//ad,da,de,y,z
+	//降序	
+//			arr1.sort(desc);//9,7,6,4,3,2
+//			arr2.sort(desc);//g,f,e,d,d
+//			arr3.sort(desc);//65,35,34,23,7,4
+//			arr4.sort(desc);//z,y,de,da,ad
+			document.write(arr1+"<br>");
+			document.write(arr2+"<br>");
+			document.write(arr3+"<br>");
+			document.write(arr4+"<br>");
+		</script>
+	</body>
+</html>

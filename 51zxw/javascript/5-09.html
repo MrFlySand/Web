@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>5-9匿名函数(没有函数名)</title>
+		<script type="text/javascript">
+			//a();
+			//function a(){
+			//	alert("明天会更好");
+			//}
+			//a();
+//1.没有函数名,而是直接赋值给一个变量通过调用或直接调用
+//注意:函数的调用语句,必须放在函数声明语句之后
+			//a();
+//			var a=function(){
+//				document.write("明天会更好");
+//			}
+//			a();
+//2.自调用函数
+			(function (){
+    			console.log("函数");
+			})();
+//3.当事件发生时调用
+	//窗口加载完时使用
+			//window.onload =function(){
+			//	alert("明天会更好3");
+			//}
+//4.函数中调用
+	//函数在3s之后调用
+//			setTimeout(function (){
+//				alert("明天会更好4");
+//			},3000)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

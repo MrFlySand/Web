@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>8-12点击多次变色</title>
+		<style type="text/css">
+			*{
+				margin:0;padding:0;
+			}
+			.box{
+				width:700px;height:700px;margin:0 auto;
+			}
+			.aa{
+				width:100px;height:100px;float:left;margin:10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<!--div.aa[style="background:green"]*20-->
+			<div class="aa" style="background:green">1</div>
+			<div class="aa" style="background:green"></div>
+			<div class="aa" style="background:green"></div>
+			<div class="aa" style="background:green"></div>
+			<div class="aa" style="background:green"></div>
+			<div class="aa" style="background:green"></div>
+			<div class="aa" style="background:green"></div>
+			<div class="aa" style="background:green"></div>
+			<div class="aa" style="background:green"></div>
+			<div class="aa" style="background:green"></div>
+			<div class="aa" style="background:green"></div>
+			<div class="aa" style="background:green"></div>
+			<div class="aa" style="background:green"></div>
+			<div class="aa" style="background:green"></div>
+			<div class="aa" style="background:green"></div>
+			<div class="aa" style="background:green"></div>
+			<div class="aa" style="background:green"></div>
+			<div class="aa" style="background:green"></div>
+			<div class="aa" style="background:green"></div>
+			<div class="aa" style="background:green"></div>
+			<div class="aa" style="background:green"></div>
+			<div class="aa" style="background:green"></div>
+			<div class="aa" style="background:green"></div>
+			<div class="aa" style="background:green"></div>
+			<div class="aa" style="background:green"></div>
+		</div>
+		<script type="text/javascript">
+			//获取所有aa的元素
+			var aa = document.getElementsByClassName("aa");
+			var abc=1;
+			//给所有aa元素加事件
+			for (var i=0;i<aa.length;i++) {
+				aa[i].onclick=function(){
+					if(abc==1){
+						//在事件中this指向了:当前正在操作的元素
+						this.style.background="red";
+						abc=2;
+					}
+					else if(abc==2){
+						//在事件中this指向了:当前正在操作的元素
+						this.style.background="blue";
+						abc=3;
+					}
+					else if(abc==3){
+						//在事件中this指向了:当前正在操作的元素
+						this.style.background="rgb(255,0,255)";
+						abc=1;
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

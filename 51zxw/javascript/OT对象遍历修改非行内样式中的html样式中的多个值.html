@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				background:url(../img/tiaobaoyifu.jpg) 0 100%/100%;
+				background-position:0px 0px;
+				width:500px;height:500px;
+				background-size:200%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			var box = document.getElementById("box");
+			box.onmousemove = function(event){
+				var ev =window.event || event;
+				//获取鼠标的位置 
+				var m_left = ev.offsetX || layerx;
+				var m_top = ev.offsetY || layery;
+				document.title = (m_left+","+m_top);
+				//width=parseInt(getComputedStyle(box,null).backgroundPositionX);
+				//height=parseInt(getComputedStyle(box,null).backgroundPositionY);
+				//box.style.backgroundPositionX= width+10+"px";
+				//box.style.backgroundPositionY= height+10+"px" ;
+//上方注释的结合如下
+//修改非行内样式,对象遍历,html样式有多个值
+				value = box.style.backgroundPosition;
+				for(i in value.length){
+					value[i]=10+"px"
+				}
+				box.style.backgroundPosition= value+10+"px";
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>9-10字符串替换</title>
+		
+	</head>
+	<body>
+		<script type="text/javascript">
+			var ch= "mingtianghuigenghao";
+			var ch2 ="flySand flySand"
+//1.查找指定位置的字符
+	//语法:ch.replace("要替换的字符","用什么替换");
+			var a =ch.replace("mingtian","tomorrow");
+			var b =ch2.replace("fly","flying");//flyingSand flySand
+	//全局匹配
+			var c =ch2.replace(/fly/g,"flying");//flyingSand flyingSand
+			var d =ch2.replace(/FLY/i,"flying");//flyingSand flySand
+			var e =ch2.replace(/FLY/ig,"flying");//flyingSand flyingSand
+			document.write(e);
+		</script>
+	</body>
+</html>

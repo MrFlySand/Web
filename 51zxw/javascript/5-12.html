@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>5-12回调函数练习1</title>
+		<script type="text/javascript">
+			function a(x,y){
+				return x+y;
+			}
+			function b(x,y){
+				return x-y;
+			}
+			function c(x,y){
+				return x*y;
+			}
+			function d(x,y){
+				return x/y;
+			}
+			function fn(x,y,m){
+				return m(x,y);
+			}
+			var re=fn(12,4,d);
+			alert(re);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>9-18表单验证</title>
+	</head>
+	<body>
+		<form action="http://127.0.0.1/9-18.php" 
+			method="post">
+			电话号码：<input type="text" name="dh"  
+				pattern="[0-9]{11}"/><br/>
+			QQ号码：<input type="text" name="qq" 
+				pattern="[0-9]{5-11}"/>
+			密码：<input type="password" name="mm" 
+				pattern="[0-9]{6-18}" 
+				placeholder="必须填写" required/>
+		<input type="submit"/>
+		</form>
+	</body>
+</html>
+

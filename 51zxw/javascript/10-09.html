@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>10-09合并数组及反转数组</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//1. concat()方法连续两个数组
+			var arr1 = [1,2,3];
+			var arr2 = [4,5,6];
+			var arr3 = [7,8,9];
+			var arr =arr1.concat(arr2);
+			var arrA =arr1.concat(arr2,arr3);
+			var arrB =arr2.concat(arr1,arr3);
+			document.write(arr1+"<br>");//1,2,3
+			document.write(arr2+"<br>");//4,5,6
+			document.write(arr+"<br>");//1,2,3,4,5,6
+			document.write(arrA+"<br>");//1,2,3,4,5,6,7,8,9
+			document.write(arrB+"<br>");//4,5,6,1,2,3,7,8,9
+//2. reverse()反转数组中元素的顺序
+	//A. 该方法会改变原来的数组,而不是创建新的数组
+	//B. 返回值并不是排序后的数组,而是数组的引用
+			var arr4 = [1,2,3,4,5,6];
+			arr5 = arr4.reverse();
+			document.write(arr4+"<br>");
+			document.write(arr5);
+		</script>
+	</body>
+</html>

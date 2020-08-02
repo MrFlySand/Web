@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>8-17清理两种定时器</title>
+		
+	</head>
+	<body>
+		<button id="butt">点击暂停</button>
+		<script type="text/javascript">
+//2.setInterval(要执行的动作,时间:毫秒);多少时间就执行,重复执行多次
+			var time1=setInterval(function(){
+					console.log("明天会更好");
+			},1000);
+//3.清理定时器
+	//a.clearInterval(要清理定时器的名称);
+		var butt=document.getElementById("butt");
+		butt.onclick=function(){
+			clearInterval(time1);	
+		}
+		</script>
+	</body>
+</html>

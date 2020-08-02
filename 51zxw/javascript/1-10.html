@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>1-10js对DOM树的阻塞</title>
+		<script type="text/javascript">
+			//alert("明天会更好");
+			window.onload=function(){
+			var abc = document.getElementById("a1");
+			abc.style.color="red";
+			}
+		</script>
+	</head>
+	<body>
+		<div id="a1">明天会更好1</div>
+		<!--<script type="text/javascript">
+			var abc = document.getElementById("a1");
+			abc.style.color="red";
+		</script>-->
+	</body>
+</html>
+1.DOM:js操作网页的接口,全称为“文档对象模型”.页面中的元素
+2.DOM树:元素和元素之间的关系,页面的结构
+3.js的执行会阻塞页面结构的加载,此时DOM树就是不完整的,这样在调用js代码时就会报错
+防止阻塞的两种方法:a.将js写在body区域的最后 b.添加window.onload事件,表示网页加载完毕后(包括图片、css文件等)执行的操作

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>10-04数组开头删除和添加</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr = [1,2,3,4,5];
+//1. shift() 删除数组开头第一项,减少数组的lenght值,然后返回移除的元素
+			var a =arr.shift();//1
+			document.write(a+"<br>"+arr+"<br>");//arr: [2,3,4,5]
+//2. unshift() 用于向数组的开头添加一个或多个元素,并返回修改数组后的长度(数值类型)
+			var b =arr.unshift(6);//数组长度为5
+			document.write(b+"<br>"+arr);//6,2,3,4,5
+		</script>
+	</body>
+</html>

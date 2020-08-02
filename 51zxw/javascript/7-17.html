@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>7-17this的应用1</title>
+		<style type="text/css">
+			.aa{
+				width:200px;height:200px;background:red;
+				float:left;font-size:20px;margin-left:10px;
+			}
+		</style>
+		<script type="text/javascript">
+			function abc(){//随机数
+				document.getElementById("aa").innerText=Math.random();
+			} 
+//在事件中this指向了:正在操作的元素
+			window.onload=function(){
+				var aa=document.getElementsByClassName("aa");
+				for(var i=0;i<aa.length;i++){
+					aa[i].onclick=function(){
+						this.innerText=Math.random();
+						this.style.background="blue";
+						this.style.height="300px";
+						this.style.color="red";
+					}
+				}
+				//aa[0].onclick=function(){
+				//	this.innerText=Math.random();
+				//}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="aa"></div>
+		<div class="aa"></div>
+		<div class="aa"></div>
+		<div class="aa"></div>
+	</body>
+</html>

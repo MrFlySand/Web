@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>11-4传入函数处理JSON键值</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var xm = '{"name":"小明","age":18,"sex":"男","height":"1.8米"}';//这是一个JSON字符串
+//1. JSON字符串转JS对象:使用JSON.parse()方法
+	// JSON.parse()方法有2个参数
+	//A. 参数1:要转换JSON字符串
+	//B. 参数2:JSON.pares()方法可以有两个参数(可选)
+			//var xm_obj = JSON.parse(xm);//{name: "小明", age: 18, sex: "男", height: "1.8米"}
+			var xm_obj = JSON.parse(xm,sex);//{name: "小明", age: 18, sex: "女", height: "1.8米"}
+			function sex(key,value){
+				if(value == "男"){
+				 	return "女";
+				}
+				return value;
+			}
+			var xm_obj = JSON.parse(xm,na);//{name: "小亮", age: 18, sex: "男", height: "1.8米"}
+			function na(key,value){
+				if(key == "name"){
+				 	return "小亮";
+				}
+				return value;
+			}
+			var xm_obj = JSON.parse(xm,hell);//{name: "小明hello", age: 18, sex: "男", height: "1.8米"}
+			function hell(key,value){
+				if(key == "name"){
+				 	return value+"hello";
+				}
+				return value;
+			}
+			console.log(xm_obj);
+			document.write(xm_obj.name+"<br>");
+			document.write(xm_obj.age+"<br>");
+			document.write(xm_obj.sex+"<br>");
+		</script>
+	</body>
+</html>

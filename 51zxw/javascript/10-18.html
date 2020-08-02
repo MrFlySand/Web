@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>10-18判断属性及销毁对象</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var　obj = {a:1,b:2,c:3,d:4};
+//1. 判断对象中是否包含某个属性: in操作符
+			var a = "b"in obj;
+			var b = "e"in obj;
+			document.write(a+"<br>");//true
+			document.write(b+"<br>");//false
+			document.write(obj+"<br>");
+			console.log(obj);//{a: 1, b: 2, c: 3, d: 4}
+			document.write(obj.b);//2
+			console.log(obj.b);//2
+//2. 销毁对象 对象=null
+			obj = null;
+			console.log(obj);//null
+			console.log(obj.b);//error
+		</script>
+	</body>
+</html>

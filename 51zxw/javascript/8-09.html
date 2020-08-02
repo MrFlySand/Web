@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:0;padding:0;
+			}
+			#img{
+				background:green;margin:0 auto;height:2000px;widows:100px;
+			}
+			#picture{
+				left:10px;background:red;width:50px;height:200px;top:30%;position:fixed;
+			}
+			#picture1{
+				right:10px;background:blue;width:50px;height:200px;top:30%;position:fixed;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="img"></div>
+		<div id="picture" style="display:none"></div>
+		<div id="picture1" style="display:none"></div>
+		<script type="text/javascript">
+//给body加滚动事件,body补控制的,onscroll事件
+			document.body.onscroll=function(){
+				var top=document.documentElement.scrollTop;
+				if(top>100){
+					//找到le_ri，再设置style中的display中的值 
+					alert(s_top);
+					document.getElementById("picture").style.display="block";
+					document.getElementById("picture1").style.display="block";
+				}else{
+					document.getElementById("picture").style.display="none";
+					document.getElementById("picture1").style.display="none";
+				}
+			}
+		</script>
+	</body>
+</html>

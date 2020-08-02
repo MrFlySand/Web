@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>5-4加减乘除</title>
+		<script type="text/javascript">
+			var number1=prompt("请输入第一个数");
+			var algorithm=prompt("请输入运算法则,'+ - * /'.结束运算输入'.'");
+			var number2=prompt("请输入第二个数");
+			judgment(algorithm);
+			function judgment(){
+				if (algorithm=="+") addition(number1*1,number2*1);
+				if (algorithm=="-") subtraction(number1*1,number2*1);
+				if (algorithm=="*") multiplication(number1*1,number2*1);
+				if (algorithm=="/") division(number1*1,number2*1);
+				if (algorithm==".") division(number1*1,number2*1);
+			}
+			function addition(){
+				alert(number1*1+number2*1);					
+			}
+			function subtraction(){
+				alert(number1-number2);
+			}
+			function multiplication(){
+				alert(number1*number2);
+			}
+			function division(){
+				alert(number1/number2);
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

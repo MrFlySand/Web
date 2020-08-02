@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>8-8元素显隐</title>
+		<style type="text/css">
+			#butt{
+				width:100px;height:30px;display:block;margin:0 auto;
+			}
+			#aa{
+				width:200px;height: 200px;margin:50px auto;background:red;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="butt">点击</button>
+		<div id="aa">
+		</div>
+		<script type="text/javascript">
+			var butt=document.getElementById("butt");
+			var aa=document.getElementById("aa");
+			var t=1;
+			butt.onclick=function(){
+				if(t==1){
+					aa.style.display="none";//元素隐藏
+					t=0;
+				}else{
+					aa.style.display="block";//元素显示
+					t=1;
+				}
+			}
+		</script>
+	</body>
+</html>

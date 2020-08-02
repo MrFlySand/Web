@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>9-2获取年,月,日,星期,时,分,秒</title>
+		
+	</head>
+	<body>
+		<script type="text/javascript">
+//1.创建当前时间对象
+			var myDate =new Date;
+	//获取完整的年份(4位数) 
+			var year = myDate.getFullYear();
+	//获取当前月份(0~11,0代表1月),可以让月份加1
+			var mon = myDate.getMonth();
+	//获取当前日期(1-31)
+			var dat =myDate.getDate();
+	//获取当前星期(0-6,0代表星期天)
+			//var day = maDate.getDay();
+	//获取小时数(0~23)
+			var hou = myDate.getHours();
+	//获取分钟(0~59) 
+			var min = myDate.getMinutes();
+	//获取秒数(0~59)
+			var msec = myDate.getSeconds();
+	//获取毫米(0~999)
+			var ms = myDate.getMilliseconds();
+			document.write(mon+"<br>");			
+		</script>
+	</body>
+</html>
