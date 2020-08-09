@@ -1,0 +1,318 @@
+/*通用样式play*/
+*{
+	margin: 0;padding: 0;
+}			
+body{
+	background: #ddd;
+}
+a{
+	color: #0000ff;
+	text-decoration: none;
+}
+a:hover{
+	color: #ea6753;
+	text-decoration: underline;
+}
+code{
+	color: #c7254e;
+}
+input{
+	border-radius: 3px;
+	border-style: solid;
+    border-color: #000;
+    padding: 0 8px;
+}
+button{
+	border-radius: 3px;
+	border-style: solid;
+	border-color: #000;
+	background: #ccc;
+}
+button:active{	
+	background: #aaa;
+}
+/*通用样式end*/
+/*主页顶侧play*/
+#header{
+	background: #ea6753;
+	-webkit-box-shadow: 2px 4px 5px rgba(3,3,3,0.2);
+    box-shadow: 2px 4px 5px rgba(3,3,3,0.2);
+    padding: 10px;
+    overflow: hidden;
+}
+.headermaintitle{
+	color: #fff;
+	display: block;
+	padding: 0;
+	text-decoration: none;
+	font-size: 2em;	
+	padding-bottom: 10px;
+}
+.headermaintitle:hover{
+	color: #fff;
+}			
+#navigator>#navList{	
+	display: inline-block;
+}
+#navigator>#navList>li{
+	list-style-type: none;
+	display: block;
+	float: left;
+	padding: 3px 8px;
+	text-shadow:3px 3px 3px #000;
+}
+#navigator>#navList>li:hover{
+	background: #2987FF;	
+}
+#navigator>#navList>li>a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 1em;
+}
+#navList a:hover {
+    text-decoration: none;
+    color: #ffff00;
+    background: rgba(0,0,0,0);
+}
+#navigator>.blogStats{
+	margin-left:8px;
+}
+@media only screen and (max-width: 768px){
+	#blogTitle h1{
+		padding: 0;
+		margin-top: -80px;
+	}	
+}	
+/*主页顶部end*/
+/*主页左侧play*/
+#main>#mainContent{
+	width: 95%;
+	margin: 10px auto;	
+    display: block;
+    background: #fff;
+}
+#main>#mainContent>.forFlow{
+	background: #fff;
+	padding: 10px;
+}
+#main>#mainContent .postTitle>a{
+	color: #2ca6cb;
+	text-decoration: none;
+	font-size: 1.5em;	
+}
+#main>#mainContent .postTitle>a:hover{
+	color: #ea6753;	
+	text-decoration: underline;
+}
+#main>#mainContent .postDesc{
+	font-size: 0.6em;
+	display: block;
+	float: right;
+	margin-bottom: 1em;
+}
+#comment_nav{
+	width: 100%;
+}
+/*主页左侧end*/
+/*主页右侧play*/
+#main>#sideBar{
+	width: 95%;
+	margin: 10px auto;	
+    background: #fff;    
+}
+#main>#sideBar>#sideBarMain{    
+    padding: 10px;    
+}
+#main>#sideBar>#sideBarMain a{
+	text-decoration: none;
+	color: #000000;
+}
+#main>#sideBar>#sideBarMain a:hover{
+	text-decoration: underline;
+	color: #ea6753;
+}
+#main>#sideBar>#sideBarMain h3.catListTitle{
+    font-size: 1.1em;
+    color: #2ca6cb;
+    padding: 0 0 .3125em 0;
+    border-bottom: .1875em solid #ccc;
+}
+.catListTitle{
+	margin-top: 1em;
+}
+/*日历*/
+div#blog-calendar{
+	background: linear-gradient(45deg,#e0c3fc,#8ec5fc);
+}
+#main>#sideBar>#sideBarMain ul>li{
+	display: block;
+    padding: 0.4em 10px;
+    border-bottom: 1px solid #ccc;
+}
+#main>#sideBar>#sideBarMain ul>li:hover{
+	color: #ea6753;
+}
+#main>#sideBar>#sideBarMain h3.catListTitle>span{
+	color: #000;
+	font-weight: 900;
+}
+#leftcontentcontainer>#blog-sidecolumn li{
+	list-style: none;
+}
+input.btn_my_zzk{
+	color: #000;
+}
+@media only screen and (min-width:1024px ) {
+	#main>#mainContent{
+		margin: 10px;
+		width: 70%;
+		float: left;	
+	}
+	#main>#sideBar{
+		margin: 10px;
+    	width: 25%;
+    	float: left;
+	}	
+	#home>#header>#navigator{
+		float: right;			
+	}	
+	.headermaintitle{
+		padding: 0;
+	}
+	#main>#mainContent .postTitle>a{
+		color: #2ca6cb;
+		text-decoration: none;
+		font-size: 1em;	
+	}
+}
+/*主页右侧end*/
+/*主页底部play*/
+#footer{
+	background: #1F1F1F;
+	padding: 10px;
+}
+/*主页底部end*/
+/*-------------------------------------------------*/
+#comment_nav{
+	display: inline-block;
+}
+div#comment_form_container{
+	margin-top: 2em;
+}
+#commentbox_opt a{
+	/*padding: 3px 8px;
+    font-size: 14px;
+    background: #ccc;
+    color: #000;
+    border-style: groove;*/
+   display: none;
+}
+#ad_t2,#under_post_news,#under_post_kb{
+	font-size: 0.6em;
+}
+#cnblogs_c2{
+    overflow: hidden;
+    display: none;
+}
+#ad_t2 a,#under_post_news a,#under_post_kb a{
+	color: #000;
+}
+/*打赏play*/
+#div_digg{
+	width: 90%;
+}
+.buryit{
+	float: right;
+}
+.iconBox{
+	width: 55px;
+	display: block;
+	margin: 0 auto;	
+}
+.defrayBox>p{
+	display: block;
+	width: auto;
+	font-size: 0.8em;
+	text-align: center;
+}
+#reachTop{
+	position: fixed;
+	top: 80%;right: 3px;
+	z-index: 999;	
+}
+#reachTop>svg{	
+	background: #000;
+	border-radius: 5px;
+	margin: 0;
+	width: 2.5em;height: 2.5em;
+}
+.defrayBox{
+	width: 518px;
+	display: none;
+	margin: 0 auto;
+}
+.defrayBox>img{
+	width: 150px;
+	margin: 0 10px;
+}
+@media only screen and (max-width: 685px) {
+	.defrayBox{
+		width: 100%;
+		display: none;
+	}
+	.defrayBox>img{
+		width: 80%;
+		display: block;
+		margin: 5px auto;
+	}
+}
+/*打赏end*/
+/*悬浮框play*/
+#reachTop{
+	position: fixed;
+	top: 80%;right: 3px;
+	z-index: 999;
+	width: 2em;height: 2em;	
+	border: 1px solid #000;
+	border-radius: 8px;
+	background: #000;	
+}
+.reachTopAnimation1{
+	transform: rotate(0deg);　　
+　　-webkit-transform:rotate(0deg);   
+	transition:transform 0.3s;
+	-moz-transition:-moz-transform 0.3s; /* Firefox 4 */
+	-webkit-transition:-webkit-transform 0.3s; /* Safari and Chrome */
+	-o-transition:-o-transform 0.3s; /* Opera */
+}
+.reachTopAnimation2{
+	transform:rotate(-180deg);　　
+　　-webkit-transform:rotate(-180deg);  
+	transition:transform 0.3s;
+	-moz-transition:-moz-transform 0.3s; /* Firefox 4 */
+	-webkit-transition:-webkit-transform 0.3s; /* Safari and Chrome */
+	-o-transition:-o-transform 0.3s; /* Opera */　　
+}
+@media only screen and (max-width:685px ) {
+	#reachTop{
+		width:3em;height: 3em;
+	}
+}
+/*悬浮框end*/
+/*内容play*/
+h1#文章目录{
+	text-align: center;	
+	margin-top: 100px;
+	background: url(https://gitee.com/MrFlySand/Other/raw/master/Material/Image/GithubPage/WebsiteAll/redLine.png) center no-repeat;
+}
+.diggit{
+	float:right;
+	margin: 0 10px;
+}
+.diggword{
+	margin-top: -60px;
+}
+svg#money{
+	margin: 10px 0;
+}
+/*内容end*/
