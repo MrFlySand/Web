@@ -1,4 +1,5 @@
-![image](https://github.com/MrFlySand/Web/assets/59566818/ecb2ed02-0f7d-4e2f-9a8b-115f3450c084)
+![image](https://github.com/MrFlySand/Web/assets/59566818/18bd4cf0-7447-4c87-954c-ac4d3ecd2d1d)
+
 
 ```
 <script>
@@ -64,7 +65,6 @@ export default{
     },
     // 增加物品个数
     add:function(index){
-      console.log(index)
       this.list[index].count = this.list[index].count + 1;
       return "this.list[index].count";  
     },
@@ -107,13 +107,32 @@ export default{
           }
         }
       }
+    },
+    // 搜索
+    // str.replace(/\ +/g,"") 清除空格
+    search:function(){
+      var str = "aaabc"
+      console.log(str.includes("d"))
+      var str = this.searchText.replace(/\ +/g,"")
+      for(var i=0; i<this.list.length; i++){
+        var nowStr = this.list[i].name.replace(/\ +/g,""); 
+        if(str==nowStr || nowStr.includes(str)){
+          this.list.unshift(this.list[i]);
+          this.list.splice(i+1,1);
+        }
+      }
     }
   }
 }
 </script>
 
 <template>
+  
   <table>
+    <div id="search">
+      <input id="searchText" v-model="searchText" type="text" placeholder="搜索" >
+      <button @click="search">搜索</button>
+    </div>
     <!-- 表头 -->
     <tr style="font-weight: 800;">
       <td>序号</td>
@@ -212,8 +231,8 @@ tr:last-child>td>div{
 }
 tr{
   padding:10px 20px;
-  /* display: table-row; */
-  border-block-end:2px solid #ccc; 
+  display: block;
+  border-block-start:2px solid #ccc; 
   writing-mode: horizontal-tb;
 }
 #push{
@@ -221,6 +240,7 @@ tr{
   width: 100%;
   display: block;
   border: none;
+  padding: 3px 15px;
 }
 input{
   border: none;
@@ -237,6 +257,34 @@ input{
 }
 #add input:active{
   border:1px solid #ccc !important;
+}
+#search{
+  border: #000 solid 1px;
+  padding: 0 !important;
+  margin: 20px 0;
+}
+#searchText{
+  margin: 2px 8px !important;
+  font-size: 16px;
+}
+#search input{
+  width: 90%;
+  padding: 5px 8px;
+  border: none !important;
+  user-select: none;
+  outline: none;
+}
+
+#search button{
+  width:auto;
+  padding: 5px 8px;
+  outline: none;
+  float: right;
+  border: none;
+  margin: auto 0;
+}
+#search button:active{
+  background-color: #ddd;
 }
 </style>
 
